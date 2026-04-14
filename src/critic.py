@@ -2,6 +2,7 @@
 
 import json
 import anthropic
+from src.utils import parse_json_response
 
 SYSTEM_PROMPT = """You are a strict quality reviewer for Anki flashcards. You evaluate each card against established flashcard design principles.
 
@@ -48,15 +49,7 @@ def critique_cards(
         ],
     )
 
-    response_text = message.content[0].text.strip()
-    if response_text.startswith("```"):
-        lines = response_text.split("\n")
-        lines = lines[1:]
-        if lines and lines[-1].strip() == "```":
-            lines = lines[:-1]
-        response_text = "\n".join(lines)
-
-    reviews = json.loads(response_text)
+    reviews = parse_json_response(message.content[0].text)
 
     passing_indices = {r["card_index"] for r in reviews if r.get("pass")}
     passed_cards = [c for i, c in enumerate(cards) if i in passing_indices]

@@ -6,22 +6,16 @@ This lets us A/B test different prompt engineering approaches on the same concep
 
 import json
 import anthropic
+from src.utils import parse_json_response
 
 
 def _call_llm(client: anthropic.Anthropic, model: str, system: str, user: str) -> str:
-    """Shared LLM call with response cleaning."""
+    """Shared LLM call returning raw response text."""
     message = client.messages.create(
         model=model, max_tokens=4096, system=system,
         messages=[{"role": "user", "content": user}],
     )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = lines[1:]
-        if lines and lines[-1].strip() == "```":
-            lines = lines[:-1]
-        text = "\n".join(lines)
-    return text
+    return message.content[0].text
 
 
 # ---------------------------------------------------------------------------
@@ -55,23 +49,7 @@ def strategy_chain_of_thought(
     concepts_json = json.dumps(concepts, indent=2)
     response = _call_llm(client, model, COT_SYSTEM,
                          COT_USER.format(concepts_json=concepts_json))
-    # Extract the JSON array from after the thinking blocks
-    # Find the last [ ... ] block in the response
-    last_bracket = response.rfind("[")
-    if last_bracket != -1:
-        json_str = response[last_bracket:]
-        # Find matching closing bracket
-        depth = 0
-        for i, ch in enumerate(json_str):
-            if ch == "[":
-                depth += 1
-            elif ch == "]":
-                depth -= 1
-                if depth == 0:
-                    json_str = json_str[: i + 1]
-                    break
-        return json.loads(json_str)
-    return json.loads(response)
+    return parse_json_response(response)
 
 
 # ---------------------------------------------------------------------------
@@ -100,7 +78,7 @@ def strategy_minimal_few_shot(
     concepts_json = json.dumps(concepts, indent=2)
     response = _call_llm(client, model, MINIMAL_FEW_SHOT_SYSTEM,
                          MINIMAL_FEW_SHOT_USER.format(concepts_json=concepts_json))
-    return json.loads(response)
+    return parse_json_response(response)
 
 
 # ---------------------------------------------------------------------------
@@ -142,7 +120,7 @@ def strategy_source_specific(
     response = _call_llm(client, model, system,
                          SOURCE_TYPE_USER.format(
                              source_type=source_type, concepts_json=concepts_json))
-    return json.loads(response)
+    return parse_json_response(response)
 
 
 # ---------------------------------------------------------------------------

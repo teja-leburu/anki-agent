@@ -22,10 +22,14 @@ from src.evaluator import evaluate_cards
 def run_strategy_comparison(
     pdf_path: str,
     strategies: list[str],
-    model: str = "claude-sonnet-4-20250514",
+    gen_model: str = "claude-haiku-4-5-20251001",
+    judge_model: str = "claude-opus-4-20250514",
     output_dir: str = "data/outputs/comparison",
 ):
-    """Run multiple strategies on the same PDF and compare results."""
+    """Run multiple strategies on the same PDF and compare results.
+
+    Uses gen_model for extraction/generation, judge_model for critique/evaluation.
+    """
     client = anthropic.Anthropic()
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
@@ -36,13 +40,16 @@ def run_strategy_comparison(
     chunks = chunk_pages(pages)
     print(f"  {len(pages)} pages → {len(chunks)} chunks\n")
 
+    print(f"  Generator model: {gen_model}")
+    print(f"  Judge model:     {judge_model}\n")
+
     # Extract concepts once (shared across strategies)
     print("Extracting concepts (shared across all strategies)...")
     all_concepts = []
     chunk_texts = []
     for i, chunk in enumerate(chunks):
         try:
-            concepts = extract_concepts(chunk["text"], client, model)
+            concepts = extract_concepts(chunk["text"], client, gen_model)
             all_concepts.append(concepts)
             chunk_texts.append(chunk["text"])
             print(f"  chunk {i + 1}: {len(concepts)} concepts")
@@ -67,19 +74,19 @@ def run_strategy_comparison(
             try:
                 if strategy_name == "few_shot":
                     # Default Phase 2 generator
-                    cards = generate_cards_from_concepts(concepts, client, model)
+                    cards = generate_cards_from_concepts(concepts, client, gen_model)
                 else:
                     gen_fn = STRATEGIES[strategy_name]
-                    cards = gen_fn(concepts, client, model)
+                    cards = gen_fn(concepts, client, gen_model)
                 print(f"    → {len(cards)} cards")
                 strategy_cards.extend(cards)
             except Exception as e:
                 print(f"    ✗ Error: {e}", file=sys.stderr)
 
-        # Critique
+        # Critique (judge model)
         print(f"  Critiquing {len(strategy_cards)} cards...")
         try:
-            passed, reviews = critique_cards(strategy_cards, client, model)
+            passed, reviews = critique_cards(strategy_cards, client, judge_model)
             print(f"    → {len(passed)} passed critique")
         except Exception as e:
             print(f"    ✗ Critique error: {e}", file=sys.stderr)
@@ -92,7 +99,7 @@ def run_strategy_comparison(
         # Evaluate
         print(f"  Evaluating {len(final)} cards...")
         try:
-            eval_result = evaluate_cards(final, source_text, client, model)
+            eval_result = evaluate_cards(final, source_text, client, judge_model)
         except Exception as e:
             print(f"    ✗ Evaluation error: {e}", file=sys.stderr)
             eval_result = {"error": str(e)}

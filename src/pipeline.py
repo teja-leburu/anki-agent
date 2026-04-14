@@ -17,11 +17,13 @@ from src.dedup import deduplicate_cards
 
 def run_pipeline(
     chunks: list[dict],
-    model: str,
+    gen_model: str,
+    judge_model: str,
     output_dir: str = "data/outputs",
 ) -> tuple[list[dict], dict]:
     """Run the full multi-prompt pipeline on a list of text chunks.
 
+    Uses gen_model for extraction and card generation, judge_model for critique.
     Returns (final_cards, stats) where stats tracks counts at each stage.
     """
     client = anthropic.Anthropic()
@@ -30,6 +32,8 @@ def run_pipeline(
 
     stats = {
         "chunks": len(chunks),
+        "gen_model": gen_model,
+        "judge_model": judge_model,
         "concepts_extracted": 0,
         "cards_generated": 0,
         "cards_passed_critique": 0,
@@ -42,30 +46,30 @@ def run_pipeline(
     for i, chunk in enumerate(chunks):
         label = f"chunk {i + 1}/{len(chunks)} (pages {chunk['source_pages']})"
 
-        # Step 1: Extract concepts
+        # Step 1: Extract concepts (gen_model)
         print(f"  [{label}] Extracting concepts...")
         try:
-            concepts = extract_concepts(chunk["text"], client, model)
+            concepts = extract_concepts(chunk["text"], client, gen_model)
             print(f"    → {len(concepts)} concepts extracted.")
             stats["concepts_extracted"] += len(concepts)
         except Exception as e:
             print(f"    ✗ Extraction error: {e}", file=sys.stderr)
             continue
 
-        # Step 2: Generate cards from concepts
+        # Step 2: Generate cards from concepts (gen_model)
         print(f"  [{label}] Generating cards from concepts...")
         try:
-            cards = generate_cards_from_concepts(concepts, client, model)
+            cards = generate_cards_from_concepts(concepts, client, gen_model)
             print(f"    → {len(cards)} cards generated.")
             stats["cards_generated"] += len(cards)
         except Exception as e:
             print(f"    ✗ Generation error: {e}", file=sys.stderr)
             continue
 
-        # Step 3: Critique cards
+        # Step 3: Critique cards (judge_model)
         print(f"  [{label}] Running quality critique...")
         try:
-            passed, reviews = critique_cards(cards, client, model)
+            passed, reviews = critique_cards(cards, client, judge_model)
             failed_count = len(cards) - len(passed)
             print(f"    → {len(passed)} passed, {failed_count} filtered out.")
             stats["cards_passed_critique"] += len(passed)

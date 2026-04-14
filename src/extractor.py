@@ -1,7 +1,7 @@
 """Step 1 of the pipeline — extract key concepts from a text chunk."""
 
-import json
 import anthropic
+from src.utils import parse_json_response
 
 SYSTEM_PROMPT = """You are an expert at identifying the most important concepts in educational material.
 
@@ -47,12 +47,4 @@ def extract_concepts(text: str, client: anthropic.Anthropic, model: str) -> list
         ],
     )
 
-    response_text = message.content[0].text.strip()
-    if response_text.startswith("```"):
-        lines = response_text.split("\n")
-        lines = lines[1:]
-        if lines and lines[-1].strip() == "```":
-            lines = lines[:-1]
-        response_text = "\n".join(lines)
-
-    return json.loads(response_text)
+    return parse_json_response(message.content[0].text)

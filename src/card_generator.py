@@ -2,6 +2,7 @@
 
 import json
 import anthropic
+from src.utils import parse_json_response
 
 SYSTEM_PROMPT = """You are an expert flashcard creator following Piotr Wozniak's "20 Rules of Formulating Knowledge."
 
@@ -69,12 +70,4 @@ def generate_cards_from_concepts(
         ],
     )
 
-    response_text = message.content[0].text.strip()
-    if response_text.startswith("```"):
-        lines = response_text.split("\n")
-        lines = lines[1:]
-        if lines and lines[-1].strip() == "```":
-            lines = lines[:-1]
-        response_text = "\n".join(lines)
-
-    return json.loads(response_text)
+    return parse_json_response(message.content[0].text)

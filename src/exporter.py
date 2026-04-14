@@ -52,7 +52,8 @@ def export_to_apkg(cards: list[dict], deck_name: str, output_path: str) -> str:
     deck = genanki.Deck(deck_id, deck_name)
 
     for card in cards:
-        tags = card.get("tags", [])
+        # Anki tags cannot contain spaces — replace with hyphens
+        tags = [t.replace(" ", "-") for t in card.get("tags", [])]
         if card["type"] == "cloze":
             note = genanki.Note(
                 model=CLOZE_MODEL,

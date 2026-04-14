@@ -7,6 +7,7 @@ classification, and source coverage measurement.
 import json
 import re
 import anthropic
+from src.utils import parse_json_response
 
 
 # ---------------------------------------------------------------------------
@@ -105,14 +106,7 @@ def llm_judge_score(
         model=model, max_tokens=4096, system=JUDGE_SYSTEM,
         messages=[{"role": "user", "content": JUDGE_USER.format(cards_json=cards_json)}],
     )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = lines[1:]
-        if lines and lines[-1].strip() == "```":
-            lines = lines[:-1]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return parse_json_response(message.content[0].text)
 
 
 # ---------------------------------------------------------------------------
@@ -152,14 +146,7 @@ def classify_blooms(
         model=model, max_tokens=2048, system=BLOOM_SYSTEM,
         messages=[{"role": "user", "content": BLOOM_USER.format(cards_json=cards_json)}],
     )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = lines[1:]
-        if lines and lines[-1].strip() == "```":
-            lines = lines[:-1]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return parse_json_response(message.content[0].text)
 
 
 # ---------------------------------------------------------------------------
@@ -198,14 +185,7 @@ def measure_coverage(
             "content": COVERAGE_USER.format(source_text=source_text, cards_json=cards_json),
         }],
     )
-    text = message.content[0].text.strip()
-    if text.startswith("```"):
-        lines = text.split("\n")
-        lines = lines[1:]
-        if lines and lines[-1].strip() == "```":
-            lines = lines[:-1]
-        text = "\n".join(lines)
-    return json.loads(text)
+    return parse_json_response(message.content[0].text)
 
 
 # ---------------------------------------------------------------------------
