@@ -1,4 +1,4 @@
-"""CLI entry point — end-to-end: PDF → chunks → flashcards → .apkg"""
+"""CLI entry point — supports both baseline (Phase 1) and pipeline (Phase 2) modes."""
 
 import argparse
 import json
@@ -9,19 +9,14 @@ from dotenv import load_dotenv
 
 from src.parser import extract_text_from_pdf, chunk_pages
 from src.generator import generate_flashcards
+from src.pipeline import run_pipeline, print_stats
 from src.exporter import export_to_apkg
 
 load_dotenv()
 
 
-def run(pdf_path: str, output_path: str, deck_name: str, model: str):
-    print(f"Parsing {pdf_path}...")
-    pages = extract_text_from_pdf(pdf_path)
-    print(f"  Extracted {len(pages)} pages with text.")
-
-    chunks = chunk_pages(pages)
-    print(f"  Split into {len(chunks)} chunks.")
-
+def run_baseline(chunks: list[dict], model: str) -> list[dict]:
+    """Phase 1 baseline: single-prompt generation per chunk."""
     all_cards = []
     for i, chunk in enumerate(chunks):
         print(f"  Generating cards for chunk {i + 1}/{len(chunks)} "
@@ -32,14 +27,32 @@ def run(pdf_path: str, output_path: str, deck_name: str, model: str):
             all_cards.extend(cards)
         except Exception as e:
             print(f"    ✗ Error on chunk {i + 1}: {e}", file=sys.stderr)
+    return all_cards
 
-    print(f"\nTotal cards generated: {len(all_cards)}")
+
+def run(pdf_path: str, output_path: str, deck_name: str, model: str, mode: str):
+    print(f"Parsing {pdf_path}...")
+    pages = extract_text_from_pdf(pdf_path)
+    print(f"  Extracted {len(pages)} pages with text.")
+
+    chunks = chunk_pages(pages)
+    print(f"  Split into {len(chunks)} chunks.")
+
+    if mode == "baseline":
+        print("\n--- Running Phase 1: Baseline (single prompt) ---\n")
+        all_cards = run_baseline(chunks, model)
+    else:
+        print("\n--- Running Phase 2: Multi-Prompt Pipeline ---\n")
+        all_cards, stats = run_pipeline(chunks, model, str(Path(output_path).parent))
+        print_stats(stats)
+
+    print(f"\nTotal cards: {len(all_cards)}")
 
     if not all_cards:
         print("No cards generated. Exiting.")
         return
 
-    # Save raw JSON for inspection
+    # Save raw JSON
     json_path = Path(output_path).with_suffix(".json")
     with open(json_path, "w") as f:
         json.dump(all_cards, f, indent=2)
@@ -59,9 +72,11 @@ def main():
                         help="Anki deck name (default: AnkiAgent Deck)")
     parser.add_argument("-m", "--model", default="claude-sonnet-4-20250514",
                         help="Claude model to use")
+    parser.add_argument("--mode", choices=["baseline", "pipeline"], default="pipeline",
+                        help="Generation mode: baseline (Phase 1) or pipeline (Phase 2, default)")
     args = parser.parse_args()
 
-    run(args.pdf, args.output, args.name, args.model)
+    run(args.pdf, args.output, args.name, args.model, args.mode)
 
 
 if __name__ == "__main__":
