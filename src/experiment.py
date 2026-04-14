@@ -142,6 +142,14 @@ def experiment_pareto(
     return results
 
 
+def _safe_coverage(ev):
+    """Safely extract coverage_pct from evaluation, handling malformed responses."""
+    cov = ev.get("coverage", {})
+    if isinstance(cov, dict):
+        return cov.get("coverage_pct", 0)
+    return 0
+
+
 def _save_and_print_pareto(results, out):
     """Print and save the Pareto frontier summary."""
     print(f"\n{'='*75}")
@@ -155,7 +163,7 @@ def _save_and_print_pareto(results, out):
     for label, r in results.items():
         ev = r.get("evaluation", {})
         scores = ev.get("avg_judge_scores", {})
-        cov = ev.get("coverage", {}).get("coverage_pct", 0)
+        cov = _safe_coverage(ev)
         summary[label] = {
             "cards": r["cards_after_dedup"],
             "avg_quality": ev.get("avg_overall", 0),
@@ -295,7 +303,7 @@ def _save_and_print_ablation(results, out):
             print(f"{name:<25} {'ERROR':>6}")
             continue
         scores = ev.get("avg_judge_scores", {})
-        cov = ev.get("coverage", {}).get("coverage_pct", 0)
+        cov = _safe_coverage(ev)
         summary[name] = {
             "cards": r["card_count"],
             "avg_quality": ev.get("avg_overall", 0),
@@ -405,7 +413,7 @@ def _save_and_print_models(results, out):
             print(f"{name:<20} {'ERROR':>5}")
             continue
         scores = ev.get("avg_judge_scores", {})
-        cov = ev.get("coverage", {}).get("coverage_pct", 0)
+        cov = _safe_coverage(ev)
         summary[name] = {
             "cards_generated": r["cards_generated"],
             "pass_rate": round(r["cards_after_critique"] / r["cards_generated"] * 100, 1) if r["cards_generated"] else 0,
