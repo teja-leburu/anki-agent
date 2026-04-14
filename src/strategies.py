@@ -5,17 +5,8 @@ This lets us A/B test different prompt engineering approaches on the same concep
 """
 
 import json
-import anthropic
+from src.llm import call_llm, call_llm_json
 from src.utils import parse_json_response
-
-
-def _call_llm(client: anthropic.Anthropic, model: str, system: str, user: str) -> str:
-    """Shared LLM call returning raw response text."""
-    message = client.messages.create(
-        model=model, max_tokens=4096, system=system,
-        messages=[{"role": "user", "content": user}],
-    )
-    return message.content[0].text
 
 
 # ---------------------------------------------------------------------------
@@ -42,13 +33,11 @@ After your reasoning for all concepts, return a final JSON array of ALL flashcar
 The JSON array must appear after all reasoning, on its own, with no other text around it."""
 
 
-def strategy_chain_of_thought(
-    concepts: list[dict], client: anthropic.Anthropic, model: str
-) -> list[dict]:
+def strategy_chain_of_thought(concepts: list[dict], client, model: str) -> list[dict]:
     """Use chain-of-thought prompting for card generation."""
     concepts_json = json.dumps(concepts, indent=2)
-    response = _call_llm(client, model, COT_SYSTEM,
-                         COT_USER.format(concepts_json=concepts_json))
+    response = call_llm(client, model, COT_SYSTEM,
+                        COT_USER.format(concepts_json=concepts_json))
     return parse_json_response(response)
 
 
@@ -71,14 +60,11 @@ CONCEPTS:
 Return ONLY a JSON array of flashcard objects with keys: type, front, back, tags."""
 
 
-def strategy_minimal_few_shot(
-    concepts: list[dict], client: anthropic.Anthropic, model: str
-) -> list[dict]:
+def strategy_minimal_few_shot(concepts: list[dict], client, model: str) -> list[dict]:
     """Use a minimal single-example few-shot prompt."""
     concepts_json = json.dumps(concepts, indent=2)
-    response = _call_llm(client, model, MINIMAL_FEW_SHOT_SYSTEM,
+    return call_llm_json(client, model, MINIMAL_FEW_SHOT_SYSTEM,
                          MINIMAL_FEW_SHOT_USER.format(concepts_json=concepts_json))
-    return parse_json_response(response)
 
 
 # ---------------------------------------------------------------------------
@@ -110,17 +96,14 @@ CONCEPTS:
 Return ONLY a JSON array of flashcard objects with keys: type, front, back, tags."""
 
 
-def strategy_source_specific(
-    concepts: list[dict], client: anthropic.Anthropic, model: str,
-    source_type: str = "textbook",
-) -> list[dict]:
+def strategy_source_specific(concepts: list[dict], client, model: str,
+                             source_type: str = "textbook") -> list[dict]:
     """Use a source-type-specific system prompt."""
     system = SOURCE_TYPE_SYSTEMS.get(source_type, SOURCE_TYPE_SYSTEMS["textbook"])
     concepts_json = json.dumps(concepts, indent=2)
-    response = _call_llm(client, model, system,
+    return call_llm_json(client, model, system,
                          SOURCE_TYPE_USER.format(
                              source_type=source_type, concepts_json=concepts_json))
-    return parse_json_response(response)
 
 
 # ---------------------------------------------------------------------------

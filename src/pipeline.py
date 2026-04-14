@@ -7,8 +7,7 @@ import json
 import sys
 from pathlib import Path
 
-import anthropic
-
+from src.llm import create_client, infer_provider
 from src.extractor import extract_concepts
 from src.card_generator import generate_cards_from_concepts
 from src.critic import critique_cards
@@ -20,13 +19,18 @@ def run_pipeline(
     gen_model: str,
     judge_model: str,
     output_dir: str = "data/outputs",
+    min_score: int = 3,
+    min_avg: float = 3.5,
+    skip_critique: bool = False,
 ) -> tuple[list[dict], dict]:
     """Run the full multi-prompt pipeline on a list of text chunks.
 
     Uses gen_model for extraction and card generation, judge_model for critique.
-    Returns (final_cards, stats) where stats tracks counts at each stage.
+    min_score/min_avg control the critique strictness threshold.
+    skip_critique=True runs without the quality gate (for ablation).
     """
-    client = anthropic.Anthropic()
+    gen_client = create_client(infer_provider(gen_model))
+    judge_client = create_client(infer_provider(judge_model))
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
@@ -34,6 +38,9 @@ def run_pipeline(
         "chunks": len(chunks),
         "gen_model": gen_model,
         "judge_model": judge_model,
+        "min_score": min_score,
+        "min_avg": min_avg,
+        "skip_critique": skip_critique,
         "concepts_extracted": 0,
         "cards_generated": 0,
         "cards_passed_critique": 0,
@@ -49,7 +56,7 @@ def run_pipeline(
         # Step 1: Extract concepts (gen_model)
         print(f"  [{label}] Extracting concepts...")
         try:
-            concepts = extract_concepts(chunk["text"], client, gen_model)
+            concepts = extract_concepts(chunk["text"], gen_client, gen_model)
             print(f"    → {len(concepts)} concepts extracted.")
             stats["concepts_extracted"] += len(concepts)
         except Exception as e:
@@ -59,27 +66,34 @@ def run_pipeline(
         # Step 2: Generate cards from concepts (gen_model)
         print(f"  [{label}] Generating cards from concepts...")
         try:
-            cards = generate_cards_from_concepts(concepts, client, gen_model)
+            cards = generate_cards_from_concepts(concepts, gen_client, gen_model)
             print(f"    → {len(cards)} cards generated.")
             stats["cards_generated"] += len(cards)
         except Exception as e:
             print(f"    ✗ Generation error: {e}", file=sys.stderr)
             continue
 
-        # Step 3: Critique cards (judge_model)
-        print(f"  [{label}] Running quality critique...")
-        try:
-            passed, reviews = critique_cards(cards, client, judge_model)
-            failed_count = len(cards) - len(passed)
-            print(f"    → {len(passed)} passed, {failed_count} filtered out.")
-            stats["cards_passed_critique"] += len(passed)
-            stats["reviews"].extend(reviews)
-            all_cards.extend(passed)
-        except Exception as e:
-            print(f"    ✗ Critique error: {e}", file=sys.stderr)
-            # On critique failure, keep all cards rather than losing them
+        # Step 3: Critique cards (judge_model) — optional
+        if skip_critique:
+            print(f"  [{label}] Skipping critique (ablation mode).")
             all_cards.extend(cards)
             stats["cards_passed_critique"] += len(cards)
+        else:
+            print(f"  [{label}] Running quality critique (min_score={min_score}, min_avg={min_avg})...")
+            try:
+                passed, reviews = critique_cards(
+                    cards, judge_client, judge_model,
+                    min_score=min_score, min_avg=min_avg,
+                )
+                failed_count = len(cards) - len(passed)
+                print(f"    → {len(passed)} passed, {failed_count} filtered out.")
+                stats["cards_passed_critique"] += len(passed)
+                stats["reviews"].extend(reviews)
+                all_cards.extend(passed)
+            except Exception as e:
+                print(f"    ✗ Critique error: {e}", file=sys.stderr)
+                all_cards.extend(cards)
+                stats["cards_passed_critique"] += len(cards)
 
     # Step 4: Deduplicate across all chunks
     print(f"\n  Deduplicating {len(all_cards)} cards across chunks...")

@@ -1,8 +1,7 @@
 """Step 2 of the pipeline — generate flashcards from extracted concepts using few-shot examples."""
 
 import json
-import anthropic
-from src.utils import parse_json_response
+from src.llm import call_llm_json
 
 SYSTEM_PROMPT = """You are an expert flashcard creator following Piotr Wozniak's "20 Rules of Formulating Knowledge."
 
@@ -50,24 +49,9 @@ Now generate cards for ALL the concepts above. For each concept, generate 1-3 ca
 Return ONLY a JSON array of flashcard objects with keys: type, front, back, tags."""
 
 
-def generate_cards_from_concepts(
-    concepts: list[dict], client: anthropic.Anthropic, model: str
-) -> list[dict]:
+def generate_cards_from_concepts(concepts: list[dict], client, model: str) -> list[dict]:
     """Generate flashcards from a list of extracted concepts using few-shot prompting."""
     concepts_json = json.dumps(concepts, indent=2)
-
-    message = client.messages.create(
-        model=model,
-        max_tokens=4096,
-        system=SYSTEM_PROMPT,
-        messages=[
-            {
-                "role": "user",
-                "content": USER_PROMPT_TEMPLATE.format(
-                    concepts_json=concepts_json, few_shot=FEW_SHOT_EXAMPLES
-                ),
-            }
-        ],
-    )
-
-    return parse_json_response(message.content[0].text)
+    return call_llm_json(client, model, SYSTEM_PROMPT,
+                         USER_PROMPT_TEMPLATE.format(
+                             concepts_json=concepts_json, few_shot=FEW_SHOT_EXAMPLES))

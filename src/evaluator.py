@@ -6,8 +6,7 @@ classification, and source coverage measurement.
 
 import json
 import re
-import anthropic
-from src.utils import parse_json_response
+from src.llm import call_llm_json
 
 
 # ---------------------------------------------------------------------------
@@ -15,22 +14,17 @@ from src.utils import parse_json_response
 # ---------------------------------------------------------------------------
 
 def heuristic_check(card: dict) -> dict:
-    """Run rule-based quality checks on a single card.
-
-    Returns a dict of check_name -> {passed: bool, detail: str}.
-    """
+    """Run rule-based quality checks on a single card."""
     results = {}
     front = card.get("front", "")
     back = card.get("back", "")
 
-    # Front length
     front_words = len(front.split())
     results["front_length"] = {
         "passed": front_words <= 30,
         "detail": f"{front_words} words (max 30)",
     }
 
-    # Back length (cloze cards may have empty back)
     if card.get("type") != "cloze":
         back_words = len(back.split())
         results["back_length"] = {
@@ -38,13 +32,11 @@ def heuristic_check(card: dict) -> dict:
             "detail": f"{back_words} words (max 20)",
         }
 
-    # Non-empty front
     results["front_nonempty"] = {
         "passed": len(front.strip()) > 0,
         "detail": "front is non-empty" if front.strip() else "front is empty",
     }
 
-    # Cloze format validation
     if card.get("type") == "cloze":
         has_cloze = bool(re.search(r"\{\{c\d+::", front))
         results["cloze_format"] = {
@@ -52,7 +44,6 @@ def heuristic_check(card: dict) -> dict:
             "detail": "valid cloze syntax" if has_cloze else "missing {{c1::...}} syntax",
         }
 
-    # Single-question check (basic cards shouldn't have multiple question marks)
     if card.get("type") == "basic":
         q_count = front.count("?")
         results["single_question"] = {
@@ -64,12 +55,12 @@ def heuristic_check(card: dict) -> dict:
 
 
 def run_heuristics(cards: list[dict]) -> list[dict]:
-    """Run heuristic checks on all cards. Returns list of per-card results."""
+    """Run heuristic checks on all cards."""
     return [{"card_index": i, "checks": heuristic_check(c)} for i, c in enumerate(cards)]
 
 
 # ---------------------------------------------------------------------------
-# 2. LLM-as-judge scoring (detailed rubric)
+# 2. LLM-as-judge scoring
 # ---------------------------------------------------------------------------
 
 JUDGE_SYSTEM = """You are a strict flashcard quality evaluator. Score each card on these dimensions (1-5):
@@ -95,18 +86,13 @@ Return a JSON array where each element has:
 Return ONLY the JSON array."""
 
 
-def llm_judge_score(
-    cards: list[dict], client: anthropic.Anthropic, model: str
-) -> list[dict]:
-    """Score cards using an LLM judge. Returns per-card score dicts."""
+def llm_judge_score(cards: list[dict], client, model: str) -> list[dict]:
+    """Score cards using an LLM judge."""
     cards_json = json.dumps(
         [{"index": i, **c} for i, c in enumerate(cards)], indent=2
     )
-    message = client.messages.create(
-        model=model, max_tokens=4096, system=JUDGE_SYSTEM,
-        messages=[{"role": "user", "content": JUDGE_USER.format(cards_json=cards_json)}],
-    )
-    return parse_json_response(message.content[0].text)
+    return call_llm_json(client, model, JUDGE_SYSTEM,
+                         JUDGE_USER.format(cards_json=cards_json))
 
 
 # ---------------------------------------------------------------------------
@@ -135,18 +121,13 @@ Return a JSON array where each element has:
 Return ONLY the JSON array."""
 
 
-def classify_blooms(
-    cards: list[dict], client: anthropic.Anthropic, model: str
-) -> list[dict]:
+def classify_blooms(cards: list[dict], client, model: str) -> list[dict]:
     """Classify each card by Bloom's Taxonomy level."""
     cards_json = json.dumps(
         [{"index": i, **c} for i, c in enumerate(cards)], indent=2
     )
-    message = client.messages.create(
-        model=model, max_tokens=2048, system=BLOOM_SYSTEM,
-        messages=[{"role": "user", "content": BLOOM_USER.format(cards_json=cards_json)}],
-    )
-    return parse_json_response(message.content[0].text)
+    return call_llm_json(client, model, BLOOM_SYSTEM,
+                         BLOOM_USER.format(cards_json=cards_json), max_tokens=2048)
 
 
 # ---------------------------------------------------------------------------
@@ -173,37 +154,21 @@ Return a JSON object with:
 Return ONLY the JSON object."""
 
 
-def measure_coverage(
-    source_text: str, cards: list[dict], client: anthropic.Anthropic, model: str
-) -> dict:
+def measure_coverage(source_text: str, cards: list[dict], client, model: str) -> dict:
     """Measure what fraction of source concepts are covered by the cards."""
     cards_json = json.dumps(cards, indent=2)
-    message = client.messages.create(
-        model=model, max_tokens=2048, system=COVERAGE_SYSTEM,
-        messages=[{
-            "role": "user",
-            "content": COVERAGE_USER.format(source_text=source_text, cards_json=cards_json),
-        }],
-    )
-    return parse_json_response(message.content[0].text)
+    return call_llm_json(client, model, COVERAGE_SYSTEM,
+                         COVERAGE_USER.format(source_text=source_text, cards_json=cards_json),
+                         max_tokens=2048)
 
 
 # ---------------------------------------------------------------------------
 # 5. Aggregate evaluation
 # ---------------------------------------------------------------------------
 
-def evaluate_cards(
-    cards: list[dict],
-    source_text: str,
-    client: anthropic.Anthropic,
-    model: str,
-) -> dict:
-    """Run the full evaluation suite on a set of cards.
-
-    Returns a dict with heuristics, judge_scores, bloom_distribution, and coverage.
-    """
+def evaluate_cards(cards: list[dict], source_text: str, client, model: str) -> dict:
+    """Run the full evaluation suite on a set of cards."""
     heuristics = run_heuristics(cards)
-
     judge_scores = llm_judge_score(cards, client, model)
 
     bloom_classes = classify_blooms(cards, client, model)
@@ -214,7 +179,6 @@ def evaluate_cards(
 
     coverage = measure_coverage(source_text, cards, client, model)
 
-    # Compute aggregate scores
     all_scores = [s["scores"] for s in judge_scores if "scores" in s]
     dimensions = ["truthfulness", "atomicity", "self_containment", "clarity", "relevance"]
     avg_scores = {}

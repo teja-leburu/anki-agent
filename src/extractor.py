@@ -1,7 +1,6 @@
 """Step 1 of the pipeline — extract key concepts from a text chunk."""
 
-import anthropic
-from src.utils import parse_json_response
+from src.llm import call_llm_json
 
 SYSTEM_PROMPT = """You are an expert at identifying the most important concepts in educational material.
 
@@ -36,15 +35,7 @@ Return a JSON array of concept objects. Each object must have:
 Return ONLY the JSON array, no other text."""
 
 
-def extract_concepts(text: str, client: anthropic.Anthropic, model: str) -> list[dict]:
+def extract_concepts(text: str, client, model: str) -> list[dict]:
     """Extract key concepts from a text chunk."""
-    message = client.messages.create(
-        model=model,
-        max_tokens=4096,
-        system=SYSTEM_PROMPT,
-        messages=[
-            {"role": "user", "content": USER_PROMPT_TEMPLATE.format(text=text)}
-        ],
-    )
-
-    return parse_json_response(message.content[0].text)
+    return call_llm_json(client, model, SYSTEM_PROMPT,
+                         USER_PROMPT_TEMPLATE.format(text=text))

@@ -1,8 +1,6 @@
 """Baseline single-prompt flashcard generator using Claude."""
 
-import json
-import anthropic
-from src.utils import parse_json_response
+from src.llm import call_llm_json
 
 SYSTEM_PROMPT = """You are an expert flashcard creator following Piotr Wozniak's "20 Rules of Formulating Knowledge."
 
@@ -32,17 +30,11 @@ Return a JSON array of flashcard objects. Each object must have:
 Return ONLY the JSON array, no other text."""
 
 
-def generate_flashcards(text: str, model: str = "claude-sonnet-4-20250514") -> list[dict]:
-    """Generate flashcards from a text chunk using Claude."""
-    client = anthropic.Anthropic()
+def generate_flashcards(text: str, client=None, model: str = "claude-sonnet-4-20250514") -> list[dict]:
+    """Generate flashcards from a text chunk using a single prompt."""
+    if client is None:
+        from src.llm import create_client, infer_provider
+        client = create_client(infer_provider(model))
 
-    message = client.messages.create(
-        model=model,
-        max_tokens=4096,
-        system=SYSTEM_PROMPT,
-        messages=[
-            {"role": "user", "content": USER_PROMPT_TEMPLATE.format(text=text)}
-        ],
-    )
-
-    return parse_json_response(message.content[0].text)
+    return call_llm_json(client, model, SYSTEM_PROMPT,
+                         USER_PROMPT_TEMPLATE.format(text=text))

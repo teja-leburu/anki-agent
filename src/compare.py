@@ -8,12 +8,11 @@ import json
 import sys
 from pathlib import Path
 
-import anthropic
-
+from src.llm import create_client, infer_provider
 from src.parser import extract_text_from_pdf, chunk_pages
 from src.extractor import extract_concepts
 from src.card_generator import generate_cards_from_concepts
-from src.strategies import STRATEGIES, strategy_chain_of_thought
+from src.strategies import STRATEGIES
 from src.critic import critique_cards
 from src.dedup import deduplicate_cards
 from src.evaluator import evaluate_cards
@@ -22,15 +21,13 @@ from src.evaluator import evaluate_cards
 def run_strategy_comparison(
     pdf_path: str,
     strategies: list[str],
-    gen_model: str = "claude-haiku-4-5-20251001",
+    gen_model: str = "claude-sonnet-4-20250514",
     judge_model: str = "claude-opus-4-20250514",
     output_dir: str = "data/outputs/comparison",
 ):
-    """Run multiple strategies on the same PDF and compare results.
-
-    Uses gen_model for extraction/generation, judge_model for critique/evaluation.
-    """
-    client = anthropic.Anthropic()
+    """Run multiple strategies on the same PDF and compare results."""
+    gen_client = create_client(infer_provider(gen_model))
+    judge_client = create_client(infer_provider(judge_model))
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
 
@@ -38,8 +35,7 @@ def run_strategy_comparison(
     print(f"Parsing {pdf_path}...")
     pages = extract_text_from_pdf(pdf_path)
     chunks = chunk_pages(pages)
-    print(f"  {len(pages)} pages → {len(chunks)} chunks\n")
-
+    print(f"  {len(pages)} pages → {len(chunks)} chunks")
     print(f"  Generator model: {gen_model}")
     print(f"  Judge model:     {judge_model}\n")
 
@@ -49,7 +45,7 @@ def run_strategy_comparison(
     chunk_texts = []
     for i, chunk in enumerate(chunks):
         try:
-            concepts = extract_concepts(chunk["text"], client, gen_model)
+            concepts = extract_concepts(chunk["text"], gen_client, gen_model)
             all_concepts.append(concepts)
             chunk_texts.append(chunk["text"])
             print(f"  chunk {i + 1}: {len(concepts)} concepts")
@@ -73,11 +69,10 @@ def run_strategy_comparison(
             print(f"  Generating cards for chunk {i + 1}...")
             try:
                 if strategy_name == "few_shot":
-                    # Default Phase 2 generator
-                    cards = generate_cards_from_concepts(concepts, client, gen_model)
+                    cards = generate_cards_from_concepts(concepts, gen_client, gen_model)
                 else:
                     gen_fn = STRATEGIES[strategy_name]
-                    cards = gen_fn(concepts, client, gen_model)
+                    cards = gen_fn(concepts, gen_client, gen_model)
                 print(f"    → {len(cards)} cards")
                 strategy_cards.extend(cards)
             except Exception as e:
@@ -86,7 +81,7 @@ def run_strategy_comparison(
         # Critique (judge model)
         print(f"  Critiquing {len(strategy_cards)} cards...")
         try:
-            passed, reviews = critique_cards(strategy_cards, client, judge_model)
+            passed, reviews = critique_cards(strategy_cards, judge_client, judge_model)
             print(f"    → {len(passed)} passed critique")
         except Exception as e:
             print(f"    ✗ Critique error: {e}", file=sys.stderr)
@@ -99,7 +94,7 @@ def run_strategy_comparison(
         # Evaluate
         print(f"  Evaluating {len(final)} cards...")
         try:
-            eval_result = evaluate_cards(final, source_text, client, judge_model)
+            eval_result = evaluate_cards(final, source_text, judge_client, judge_model)
         except Exception as e:
             print(f"    ✗ Evaluation error: {e}", file=sys.stderr)
             eval_result = {"error": str(e)}
@@ -109,15 +104,12 @@ def run_strategy_comparison(
             "evaluation": eval_result,
         }
 
-        # Save per-strategy results
         strategy_path = out / f"{strategy_name}.json"
         with open(strategy_path, "w") as f:
             json.dump(results[strategy_name], f, indent=2)
 
-    # Print comparison table
     print_comparison_table(results)
 
-    # Save full comparison
     summary = {
         name: {
             "card_count": r["evaluation"].get("card_count", 0),
