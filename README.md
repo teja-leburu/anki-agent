@@ -19,12 +19,29 @@ ANTHROPIC_API_KEY=sk-ant-...
 ## Usage
 
 ```bash
-# Phase 2 multi-prompt pipeline (default)
-python -m src.main path/to/document.pdf -o output.apkg -n "My Deck"
+# Generate flashcards (Phase 2 pipeline, default)
+python -m src.main generate path/to/document.pdf -o output.apkg -n "My Deck"
 
-# Phase 1 baseline for comparison
-python -m src.main path/to/document.pdf --mode baseline
+# Generate with Phase 1 baseline
+python -m src.main generate path/to/document.pdf --mode baseline
+
+# Generate with evaluation metrics
+python -m src.main generate path/to/document.pdf --evaluate
+
+# Compare prompt strategies side-by-side
+python -m src.main compare path/to/document.pdf -s few_shot chain_of_thought minimal_few_shot
 ```
+
+### Available Strategies
+
+| Strategy | Description |
+|---|---|
+| `few_shot` | Default Phase 2 with rich few-shot examples (3 concept types) |
+| `chain_of_thought` | CoT reasoning before card generation (Wei et al., 2022) |
+| `minimal_few_shot` | Single-example few-shot (tests prompt sensitivity) |
+| `source_textbook` | Optimized for dense textbook material |
+| `source_lecture` | Optimized for terse lecture slides |
+| `source_paper` | Optimized for research papers |
 
 ## Architecture
 
@@ -50,6 +67,15 @@ PDF → Parser → Chunks
               genanki → .apkg
 ```
 
+## Evaluation Framework
+
+The `--evaluate` flag and `compare` command run a multi-dimensional evaluation:
+
+- **Heuristic checks** — card length, cloze syntax, single-question detection
+- **LLM-as-judge** — scores on truthfulness, atomicity, self-containment, clarity, relevance (1-5)
+- **Bloom's Taxonomy** — classifies cards by cognitive level (remember/understand/apply/analyze)
+- **Source coverage** — measures what % of key concepts from the source are represented
+
 ## Project Structure
 
 ```
@@ -61,10 +87,13 @@ src/
   critic.py         # Phase 2 Step 3: LLM-as-judge quality critique
   dedup.py          # Phase 2 Step 4: embedding deduplication
   pipeline.py       # Phase 2 orchestrator
+  strategies.py     # Phase 3: prompt strategy variations (CoT, source-specific, etc.)
+  evaluator.py      # Phase 3: evaluation framework (heuristics, judge, Bloom's, coverage)
+  compare.py        # Phase 3: strategy comparison runner
   exporter.py       # .apkg export via genanki
   main.py           # CLI entry point
 data/
   sample_inputs/    # Test PDFs
-  outputs/          # Generated decks and stats (gitignored)
+  outputs/          # Generated decks, stats, and evaluations (gitignored)
 tests/              # Unit tests
 ```
