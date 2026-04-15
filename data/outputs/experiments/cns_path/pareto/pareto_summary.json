@@ -1,0 +1,37 @@
+{
+  "no_filter": {
+    "cards": 30,
+    "avg_quality": 4.72,
+    "coverage_pct": 73.9,
+    "atomicity": 3.6,
+    "truthfulness": 5.0
+  },
+  "lenient": {
+    "cards": 30,
+    "avg_quality": 4.75,
+    "coverage_pct": 81.8,
+    "atomicity": 3.73,
+    "truthfulness": 5.0
+  },
+  "moderate": {
+    "cards": 28,
+    "avg_quality": 4.81,
+    "coverage_pct": 73.9,
+    "atomicity": 4.07,
+    "truthfulness": 5.0
+  },
+  "strict": {
+    "cards": 22,
+    "avg_quality": 4.88,
+    "coverage_pct": 71.4,
+    "atomicity": 4.41,
+    "truthfulness": 5.0
+  },
+  "very_strict": {
+    "cards": 25,
+    "avg_quality": 4.82,
+    "coverage_pct": 72.41,
+    "atomicity": 4.24,
+    "truthfulness": 4.96
+  }
+}

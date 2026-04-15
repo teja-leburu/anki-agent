@@ -1,0 +1,2427 @@
+{
+  "config": {
+    "name": "baseline",
+    "desc": "Single prompt, no pipeline"
+  },
+  "card_count": 69,
+  "evaluation": {
+    "card_count": 69,
+    "heuristic_pass_rate": 100.0,
+    "avg_judge_scores": {
+      "truthfulness": 4.99,
+      "atomicity": 4.19,
+      "self_containment": 4.99,
+      "clarity": 4.99,
+      "relevance": 4.91
+    },
+    "avg_overall": 4.81,
+    "bloom_distribution": {
+      "remember": 51,
+      "understand": 17,
+      "apply": 1
+    },
+    "coverage": {
+      "key_concepts": [
+        "homeostasis and physiologic stress",
+        "hypertrophy mechanism and characteristics",
+        "hyperplasia mechanism and characteristics",
+        "permanent tissues (cardiac, skeletal muscle, nerve)",
+        "pathologic hyperplasia progression to cancer",
+        "benign prostatic hyperplasia exception",
+        "atrophy causes and mechanisms",
+        "apoptosis in atrophy",
+        "ubiquitin-proteosome degradation",
+        "autophagy in atrophy",
+        "metaplasia definition and mechanism",
+        "Barrett esophagus",
+        "metaplasia reversibility",
+        "metaplasia progression to dysplasia and cancer",
+        "apocrine metaplasia exception",
+        "vitamin A deficiency and keratomalacia",
+        "myositis ossificans",
+        "dysplasia characteristics",
+        "cervical intraepithelial neoplasia (CIN)",
+        "dysplasia reversibility and progression",
+        "aplasia",
+        "hypoplasia",
+        "cellular injury basic principles",
+        "hypoxia and ATP production",
+        "ischemia causes",
+        "hypoxemia causes",
+        "decreased oxygen-carrying capacity",
+        "carbon monoxide poisoning",
+        "methemoglobinemia"
+      ],
+      "covered": [
+        "homeostasis and physiologic stress",
+        "hypertrophy mechanism and characteristics",
+        "hyperplasia mechanism and characteristics",
+        "permanent tissues (cardiac, skeletal muscle, nerve)",
+        "pathologic hyperplasia progression to cancer",
+        "benign prostatic hyperplasia exception",
+        "atrophy causes and mechanisms",
+        "apoptosis in atrophy",
+        "ubiquitin-proteosome degradation",
+        "autophagy in atrophy",
+        "metaplasia definition and mechanism",
+        "Barrett esophagus",
+        "metaplasia reversibility",
+        "metaplasia progression to dysplasia and cancer",
+        "vitamin A deficiency and keratomalacia",
+        "myositis ossificans",
+        "dysplasia characteristics",
+        "cervical intraepithelial neoplasia (CIN)",
+        "dysplasia reversibility and progression",
+        "aplasia",
+        "hypoplasia",
+        "cellular injury basic principles",
+        "hypoxia and ATP production"
+      ],
+      "missing": [
+        "apocrine metaplasia exception",
+        "ischemia causes",
+        "hypoxemia causes",
+        "decreased oxygen-carrying capacity",
+        "carbon monoxide poisoning",
+        "methemoglobinemia"
+      ],
+      "coverage_pct": 79.31
+    },
+    "details": {
+      "heuristics": [
+        {
+          "card_index": 0,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 1,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "17 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 2,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 3,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 4,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "10 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 5,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "17 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 6,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 7,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 8,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 9,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "17 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 10,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "16 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 11,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "5 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 12,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "3 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "9 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 13,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "15 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 14,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 15,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 16,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "5 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 17,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "5 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 18,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "16 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 19,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 20,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 21,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "15 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 22,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 23,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 24,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 25,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "6 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "5 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 26,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 27,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 28,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 29,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 30,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 31,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 32,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "6 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 33,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 34,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 35,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 36,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 37,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "9 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 38,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 39,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 40,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 41,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 42,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 43,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "20 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 44,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "19 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 45,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "17 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 46,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "6 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 47,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 48,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "16 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 49,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 50,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 51,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 52,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 53,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 54,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 55,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 56,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 57,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 58,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 59,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 60,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 61,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 62,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 63,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 64,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 65,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 66,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 67,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 68,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        }
+      ],
+      "judge_scores": [
+        {
+          "card_index": 0,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - this is a perfect flashcard testing a single fundamental concept clearly."
+        },
+        {
+          "card_index": 1,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two separate facts (hypertrophy definition and hyperplasia definition) in a single card."
+        },
+        {
+          "card_index": 2,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three related but distinct facts about hypertrophy mechanisms in one card."
+        },
+        {
+          "card_index": 3,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - tests one clear fact about hyperplasia mechanism."
+        },
+        {
+          "card_index": 4,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - clear question and answer about cardiac muscle adaptation."
+        },
+        {
+          "card_index": 5,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two facts: pathologic hyperplasia progression and the BPH exception."
+        },
+        {
+          "card_index": 6,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the definition of atrophy and two mechanisms (cell size and number decrease)."
+        },
+        {
+          "card_index": 7,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - tests one specific mechanism of atrophy."
+        },
+        {
+          "card_index": 8,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two distinct mechanisms of cell size decrease in one card."
+        },
+        {
+          "card_index": 9,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - clear definition of metaplasia."
+        },
+        {
+          "card_index": 10,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the original and resulting cell types in Barrett's esophagus transformation."
+        },
+        {
+          "card_index": 11,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - tests one mechanism of metaplasia."
+        },
+        {
+          "card_index": 12,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - clear question about metaplasia reversibility."
+        },
+        {
+          "card_index": 13,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the cell type change and the clinical term in one card."
+        },
+        {
+          "card_index": 14,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the definition of myositis ossificans and the specific tissue change."
+        },
+        {
+          "card_index": 15,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the definition of dysplasia and its precancerous nature."
+        },
+        {
+          "card_index": 16,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - tests one fact about dysplasia origins."
+        },
+        {
+          "card_index": 17,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the progression outcome and its irreversibility."
+        },
+        {
+          "card_index": 18,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two separate definitions (aplasia and hypoplasia) in one card."
+        },
+        {
+          "card_index": 19,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both what CIN represents and its relationship to cervical cancer."
+        },
+        {
+          "card_index": 20,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - clear question about dysplasia reversibility."
+        },
+        {
+          "card_index": 21,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - clear definition of hypoplasia."
+        },
+        {
+          "card_index": 22,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - tests one fundamental concept about cellular injury."
+        },
+        {
+          "card_index": 23,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - clear comparison question about ischemic susceptibility."
+        },
+        {
+          "card_index": 24,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are excellent - tests one fundamental biochemistry fact."
+        },
+        {
+          "card_index": 25,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card - accurate, atomic, clear medical definition."
+        },
+        {
+          "card_index": 26,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent cloze card testing single key term with clear definition."
+        },
+        {
+          "card_index": 27,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two separate facts (PaO2 and SaO2 values) in one card, reducing atomicity."
+        },
+        {
+          "card_index": 28,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single classic clinical finding."
+        },
+        {
+          "card_index": 29,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Clear, atomic card about important clinical symptom."
+        },
+        {
+          "card_index": 30,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent cloze testing specific oxidation state of iron."
+        },
+        {
+          "card_index": 31,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two findings (cyanosis AND chocolate-colored blood) though they're closely related."
+        },
+        {
+          "card_index": 32,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect treatment card with single, specific answer."
+        },
+        {
+          "card_index": 33,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent cloze testing single hallmark feature."
+        },
+        {
+          "card_index": 34,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect parallel to card 8, testing single key concept."
+        },
+        {
+          "card_index": 35,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Clear cause-effect relationship testing single mechanism."
+        },
+        {
+          "card_index": 36,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect parallel to card 10, testing different pump."
+        },
+        {
+          "card_index": 37,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two separate consequences (enzyme leak AND calcium entry) in one card."
+        },
+        {
+          "card_index": 38,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the hallmark AND three processes in one card, reducing atomicity."
+        },
+        {
+          "card_index": 39,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two mechanisms but they're the complete set, making it acceptable."
+        },
+        {
+          "card_index": 40,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect cloze testing single necrosis type with clear context."
+        },
+        {
+          "card_index": 41,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Lists three examples (brain, abscess, pancreatitis) though they're all for one concept."
+        },
+        {
+          "card_index": 42,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests appearance AND characteristic disease, slightly reducing atomicity."
+        },
+        {
+          "card_index": 43,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests definition, appearance, AND two locations in one card."
+        },
+        {
+          "card_index": 44,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests appearance, calcium deposition, AND two causes in one card."
+        },
+        {
+          "card_index": 45,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests location of damage AND two characteristic conditions."
+        },
+        {
+          "card_index": 46,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single process definition."
+        },
+        {
+          "card_index": 47,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests location AND serum calcium status, though closely related."
+        },
+        {
+          "card_index": 48,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests cause (high Ca/PO4) AND effect (deposition) in one card."
+        },
+        {
+          "card_index": 49,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests ATP-dependence, genetic programming, AND cell involvement pattern."
+        },
+        {
+          "card_index": 50,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing a single essential fact about caspases in apoptosis."
+        },
+        {
+          "card_index": 51,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent cloze card testing one key fact about Bcl2's role in apoptosis."
+        },
+        {
+          "card_index": 52,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 4
+          },
+          "justification": "Answer is oversimplified - cytochrome c activates caspases which then trigger apoptosis."
+        },
+        {
+          "card_index": 53,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Simple but important distinguishing feature of apoptosis clearly stated."
+        },
+        {
+          "card_index": 54,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Tests multiple facts (programmed, energy-dependent, no inflammation) in one card."
+        },
+        {
+          "card_index": 55,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two sequential facts (cytochrome c leak AND caspase activation) rather than one."
+        },
+        {
+          "card_index": 56,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect cloze card testing single fact about FAS ligand in extrinsic pathway."
+        },
+        {
+          "card_index": 57,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests multiple facts (perforins create pores AND granzyme enters AND activates caspases)."
+        },
+        {
+          "card_index": 58,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing the fundamental definition of free radicals."
+        },
+        {
+          "card_index": 59,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Tests three different facts (names of three radicals) in one card."
+        },
+        {
+          "card_index": 60,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single enzymatic conversion fact."
+        },
+        {
+          "card_index": 61,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Clear, atomic card about catalase function in peroxisomes."
+        },
+        {
+          "card_index": 62,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Good atomic card, though CCl4 toxicity is somewhat specialized knowledge."
+        },
+        {
+          "card_index": 63,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 4,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Requires understanding that CCl4 exposure context from previous cards."
+        },
+        {
+          "card_index": 64,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two distinct facts (structure AND staining property) in one card."
+        },
+        {
+          "card_index": 65,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both AL amyloid type AND its light chain origin."
+        },
+        {
+          "card_index": 66,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single important clinical fact."
+        },
+        {
+          "card_index": 67,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both SAA identity AND its deposition as AA amyloid."
+        },
+        {
+          "card_index": 68,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Good atomic card, though the specific percentage is less critical than the concept."
+        }
+      ],
+      "bloom_classes": [
+        {
+          "card_index": 0,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 1,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 2,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 3,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 4,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 5,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 6,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 7,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 8,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 9,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 10,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 11,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 12,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 13,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 14,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 15,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 16,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 17,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 18,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 19,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 20,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 21,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 22,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 23,
+          "bloom_level": "apply"
+        },
+        {
+          "card_index": 24,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 25,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 26,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 27,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 28,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 29,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 30,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 31,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 32,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 33,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 34,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 35,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 36,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 37,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 38,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 39,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 40,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 41,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 42,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 43,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 44,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 45,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 46,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 47,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 48,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 49,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 50,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 51,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 52,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 53,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 54,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 55,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 56,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 57,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 58,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 59,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 60,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 61,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 62,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 63,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 64,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 65,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 66,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 67,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 68,
+          "bloom_level": "remember"
+        }
+      ]
+    }
+  }
+}

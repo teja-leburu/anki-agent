@@ -1,0 +1,909 @@
+{
+  "config": {
+    "name": "pipeline_few_shot_3",
+    "desc": "Full pipeline + 3-example few-shot (default)"
+  },
+  "card_count": 24,
+  "evaluation": {
+    "card_count": 24,
+    "heuristic_pass_rate": 100.0,
+    "avg_judge_scores": {
+      "truthfulness": 5.0,
+      "atomicity": 3.88,
+      "self_containment": 5.0,
+      "clarity": 5.0,
+      "relevance": 4.96
+    },
+    "avg_overall": 4.77,
+    "bloom_distribution": {
+      "remember": 17,
+      "understand": 6,
+      "analyze": 1
+    },
+    "coverage": {
+      "key_concepts": [
+        "Neural tube defects",
+        "Folate deficiency and neural tube defects",
+        "AFP detection of neural tube defects",
+        "Anencephaly",
+        "Polyhydramnios with anencephaly",
+        "Spina bifida types (occulta, meningocele, meningomyelocele)",
+        "Cerebral aqueduct stenosis",
+        "CSF flow pathway",
+        "Dandy-Walker malformation",
+        "Arnold-Chiari malformation type II",
+        "Syringomyelia",
+        "Poliomyelitis",
+        "Werdnig-Hoffman disease",
+        "Amyotrophic lateral sclerosis (ALS)",
+        "ALS vs syringomyelia distinction",
+        "SOD1 mutation in ALS",
+        "Friedreich ataxia",
+        "Frataxin gene and iron metabolism",
+        "Hypertrophic cardiomyopathy in Friedreich ataxia",
+        "Meningitis and leptomeninges",
+        "Spinothalamic tract",
+        "Dorsal column-medial lemniscus pathway",
+        "Lateral corticospinal tract",
+        "Hypothalamospinal tract",
+        "Upper vs lower motor neuron signs",
+        "Horner syndrome in syringomyelia"
+      ],
+      "covered": [
+        "Neural tube defects",
+        "Folate deficiency and neural tube defects",
+        "AFP detection of neural tube defects",
+        "Anencephaly",
+        "Polyhydramnios with anencephaly",
+        "Spina bifida types (occulta, meningocele, meningomyelocele)",
+        "Cerebral aqueduct stenosis",
+        "Dandy-Walker malformation",
+        "Arnold-Chiari malformation type II",
+        "Syringomyelia",
+        "Poliomyelitis",
+        "Werdnig-Hoffman disease",
+        "Amyotrophic lateral sclerosis (ALS)",
+        "ALS vs syringomyelia distinction",
+        "SOD1 mutation in ALS",
+        "Friedreich ataxia",
+        "Frataxin gene and iron metabolism",
+        "Meningitis and leptomeninges",
+        "Lateral corticospinal tract"
+      ],
+      "missing": [
+        "CSF flow pathway",
+        "Hypertrophic cardiomyopathy in Friedreich ataxia",
+        "Spinothalamic tract",
+        "Dorsal column-medial lemniscus pathway",
+        "Hypothalamospinal tract",
+        "Upper vs lower motor neuron signs",
+        "Horner syndrome in syringomyelia"
+      ],
+      "coverage_pct": 73.1
+    },
+    "details": {
+      "heuristics": [
+        {
+          "card_index": 0,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "16 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 1,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 2,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 3,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 4,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 5,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 6,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 7,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "16 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 8,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 9,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 10,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 11,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 12,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 13,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 14,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 15,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 16,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 17,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 18,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 19,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 20,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 21,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 22,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "6 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "5 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 23,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        }
+      ],
+      "judge_scores": [
+        {
+          "card_index": 0,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two separate facts (incomplete closure AND timing of early gestation) reducing atomicity."
+        },
+        {
+          "card_index": 1,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single essential fact about folate deficiency and neural tube defects."
+        },
+        {
+          "card_index": 2,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Slightly non-atomic as it asks about both amniotic fluid AND maternal blood detection."
+        },
+        {
+          "card_index": 3,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two facts: what anencephaly is AND which part of neural tube is affected."
+        },
+        {
+          "card_index": 4,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfectly atomic card testing single association between anencephaly and polyhydramnios."
+        },
+        {
+          "card_index": 5,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent atomic card testing single identifying feature of spina bifida occulta."
+        },
+        {
+          "card_index": 6,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Slightly non-atomic as it presents two conditions and their features rather than one fact."
+        },
+        {
+          "card_index": 7,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three facts: stenosis causes hydrocephalus, affects newborns, AND blocks specific CSF route."
+        },
+        {
+          "card_index": 8,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two distinct features (vermis failure AND dilated 4th ventricle) reducing atomicity."
+        },
+        {
+          "card_index": 9,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests what displaces, direction of displacement, AND anatomical landmark in one card."
+        },
+        {
+          "card_index": 10,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect atomic card testing single association between Chiari II and meningomyelocele."
+        },
+        {
+          "card_index": 11,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests multiple facts: sensory pattern, location, lost modalities, AND preserved modalities."
+        },
+        {
+          "card_index": 12,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both virus identity AND its specific neurological effect, slightly reducing atomicity."
+        },
+        {
+          "card_index": 13,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests inheritance pattern, affected structure, AND clinical presentation in one card."
+        },
+        {
+          "card_index": 14,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three facts: affects upper neurons, affects lower neurons, AND specific tract involved."
+        },
+        {
+          "card_index": 15,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfectly atomic card testing single fact about Werdnig-Hoffman prognosis."
+        },
+        {
+          "card_index": 16,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent atomic card testing single distinguishing feature between two conditions."
+        },
+        {
+          "card_index": 17,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the mutation AND its pathological consequence, slightly reducing atomicity."
+        },
+        {
+          "card_index": 18,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Less clinically relevant than other cards as it tests abbreviation expansion rather than medical concept."
+        },
+        {
+          "card_index": 19,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the repeat type AND the affected gene, slightly reducing atomicity."
+        },
+        {
+          "card_index": 20,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two related but distinct facts about iron regulation AND free radical damage."
+        },
+        {
+          "card_index": 21,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect atomic card testing single anatomical terminology fact about leptomeninges."
+        },
+        {
+          "card_index": 22,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent atomic card testing single fact about anatomical location of meningitis."
+        },
+        {
+          "card_index": 23,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests multiple anatomical facts about tract pathway including crossing point AND synapse location."
+        }
+      ],
+      "bloom_classes": [
+        {
+          "card_index": 0,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 1,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 2,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 3,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 4,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 5,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 6,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 7,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 8,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 9,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 10,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 11,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 12,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 13,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 14,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 15,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 16,
+          "bloom_level": "analyze"
+        },
+        {
+          "card_index": 17,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 18,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 19,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 20,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 21,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 22,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 23,
+          "bloom_level": "understand"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "config": {
+    "name": "pipeline_few_shot_1",
+    "desc": "Full pipeline + 1-example few-shot"
+  },
+  "card_count": 0,
+  "evaluation": {
+    "error": "'str' object has no attribute 'get'"
+  }
+}

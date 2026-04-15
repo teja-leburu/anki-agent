@@ -1,0 +1,1843 @@
+{
+  "threshold": {
+    "min_score": 4,
+    "min_avg": 4.0,
+    "label": "very_strict"
+  },
+  "cards_before_filter": 56,
+  "cards_after_filter": 56,
+  "cards_after_dedup": 50,
+  "evaluation": {
+    "card_count": 50,
+    "heuristic_pass_rate": 100.0,
+    "avg_judge_scores": {
+      "truthfulness": 4.94,
+      "atomicity": 3.72,
+      "self_containment": 5.0,
+      "clarity": 4.96,
+      "relevance": 4.98
+    },
+    "avg_overall": 4.72,
+    "bloom_distribution": {
+      "remember": 29,
+      "understand": 16,
+      "apply": 4,
+      "analyze": 1
+    },
+    "coverage": {
+      "key_concepts": [
+        "Cleft lip and palate",
+        "Aphthous ulcer",
+        "Beh\u00e7et syndrome",
+        "Oral herpes/HSV-1",
+        "Oral squamous cell carcinoma",
+        "Leukoplakia",
+        "Erythroplakia",
+        "Oral candidiasis",
+        "Hairy leukoplakia",
+        "Mumps",
+        "Sialadenitis/sialolithiasis",
+        "Pleomorphic adenoma",
+        "Warthin tumor",
+        "Mucoepidermoid carcinoma",
+        "Tracheoesophageal fistula",
+        "Esophageal web",
+        "Plummer-Vinson syndrome",
+        "Zenker diverticulum",
+        "Mallory-Weiss syndrome",
+        "Boerhaave syndrome",
+        "Esophageal varices",
+        "Achalasia",
+        "GERD",
+        "Barrett esophagus",
+        "Esophageal adenocarcinoma",
+        "Esophageal squamous cell carcinoma",
+        "Gastroschisis",
+        "Omphalocele",
+        "Pyloric stenosis",
+        "Acute gastritis",
+        "Curling ulcer",
+        "Cushing ulcer",
+        "Chronic autoimmune gastritis",
+        "Chronic H. pylori gastritis",
+        "MALT lymphoma risk"
+      ],
+      "covered": [
+        "Cleft lip and palate",
+        "Aphthous ulcer",
+        "Beh\u00e7et syndrome",
+        "Oral herpes/HSV-1",
+        "Oral squamous cell carcinoma",
+        "Leukoplakia",
+        "Erythroplakia",
+        "Oral candidiasis",
+        "Mumps",
+        "Sialadenitis/sialolithiasis",
+        "Pleomorphic adenoma",
+        "Warthin tumor",
+        "Mucoepidermoid carcinoma",
+        "Tracheoesophageal fistula",
+        "Esophageal web",
+        "Plummer-Vinson syndrome",
+        "Zenker diverticulum",
+        "Mallory-Weiss syndrome",
+        "Boerhaave syndrome",
+        "Esophageal varices",
+        "Achalasia",
+        "Barrett esophagus",
+        "Esophageal adenocarcinoma",
+        "Esophageal squamous cell carcinoma",
+        "Gastroschisis",
+        "Omphalocele",
+        "Pyloric stenosis",
+        "Curling ulcer",
+        "Cushing ulcer",
+        "Chronic autoimmune gastritis",
+        "Chronic H. pylori gastritis"
+      ],
+      "missing": [
+        "Hairy leukoplakia",
+        "GERD",
+        "Acute gastritis",
+        "MALT lymphoma risk"
+      ],
+      "coverage_pct": 88.57
+    },
+    "details": {
+      "heuristics": [
+        {
+          "card_index": 0,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "19 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 1,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 2,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 3,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 4,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "4 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 5,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 6,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "4 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 7,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 8,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "5 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 9,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 10,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 11,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 12,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 13,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "4 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 14,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 15,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 16,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 17,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 18,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 19,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 20,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 21,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 22,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 23,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 24,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "19 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 25,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 26,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "5 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 27,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 28,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "19 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 29,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 30,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "19 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 31,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 32,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "22 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 33,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 34,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 35,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 36,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 37,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 38,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 39,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 40,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 41,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "1 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 42,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 43,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 44,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "4 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 45,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "4 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "6 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 46,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 47,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 48,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "17 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 49,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "9 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        }
+      ],
+      "judge_scores": [
+        {
+          "card_index": 0,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three distinct facts (defect type, cause, and timing) in a single card."
+        },
+        {
+          "card_index": 1,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three separate features (pain/depth, base color, and surrounding appearance) in one card."
+        },
+        {
+          "card_index": 2,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 4
+          },
+          "justification": "Answer oversimplifies triggers (stress is one factor among many) and doesn't mention all causes."
+        },
+        {
+          "card_index": 3,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three distinct components of the syndrome rather than one fact."
+        },
+        {
+          "card_index": 4,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single fact about etiology."
+        },
+        {
+          "card_index": 5,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single specific fact."
+        },
+        {
+          "card_index": 6,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Lists two triggers as if they're the only ones, when others exist (immunosuppression, fever)."
+        },
+        {
+          "card_index": 7,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 1,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three completely different facts (risk factors and location) in one card."
+        },
+        {
+          "card_index": 8,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single distinguishing feature."
+        },
+        {
+          "card_index": 9,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect comparison card testing single fact."
+        },
+        {
+          "card_index": 10,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three facts (appearance, nature, and clinical significance) in one card."
+        },
+        {
+          "card_index": 11,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 5
+          },
+          "justification": "Answer incomplete - orchitis is one complication but pancreatitis and aseptic meningitis are also main complications."
+        },
+        {
+          "card_index": 12,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three separate complications rather than one fact."
+        },
+        {
+          "card_index": 13,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single etiology fact."
+        },
+        {
+          "card_index": 14,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single microbiological fact."
+        },
+        {
+          "card_index": 15,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three distinct facts (prevalence, malignancy status, and histology) in one card."
+        },
+        {
+          "card_index": 16,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single clinical feature."
+        },
+        {
+          "card_index": 17,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three facts (ranking, morphology, and histology) in one card."
+        },
+        {
+          "card_index": 18,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single anatomical fact."
+        },
+        {
+          "card_index": 19,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two facts (prevalence and cellular composition) in one card."
+        },
+        {
+          "card_index": 20,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single distinguishing clinical feature."
+        },
+        {
+          "card_index": 21,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests basic anatomy and most common variant type in one card."
+        },
+        {
+          "card_index": 22,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three components of syndrome rather than one fact."
+        },
+        {
+          "card_index": 23,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single cancer association."
+        },
+        {
+          "card_index": 24,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three facts (true vs false nature, anatomy, and location) in one card."
+        },
+        {
+          "card_index": 25,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single pathological fact."
+        },
+        {
+          "card_index": 26,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single pathological fact."
+        },
+        {
+          "card_index": 27,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests pathophysiology mechanism and anatomical location in one card."
+        },
+        {
+          "card_index": 28,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 1,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests definition, pathology, and radiological finding - three distinct facts."
+        },
+        {
+          "card_index": 29,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single cancer association."
+        },
+        {
+          "card_index": 30,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests metaplasia types, histological feature, and etiology in one card."
+        },
+        {
+          "card_index": 31,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single cancer progression fact."
+        },
+        {
+          "card_index": 32,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 1,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests epidemiology, etiology, and location - three separate facts."
+        },
+        {
+          "card_index": 33,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single statistical fact."
+        },
+        {
+          "card_index": 34,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single epidemiological fact."
+        },
+        {
+          "card_index": 35,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single anatomical fact."
+        },
+        {
+          "card_index": 36,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single anatomical fact."
+        },
+        {
+          "card_index": 37,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two risk factors as a pair, though they commonly occur together."
+        },
+        {
+          "card_index": 38,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single lymphatic drainage fact."
+        },
+        {
+          "card_index": 39,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two node groups, though they drain together for this location."
+        },
+        {
+          "card_index": 40,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two covering layers as one fact, though they form a single covering."
+        },
+        {
+          "card_index": 41,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single distinguishing feature."
+        },
+        {
+          "card_index": 42,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests pathology type, anatomical location, and gender predilection in one card."
+        },
+        {
+          "card_index": 43,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three distinct clinical signs rather than one fact."
+        },
+        {
+          "card_index": 44,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single etiology with mechanism."
+        },
+        {
+          "card_index": 45,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single etiology with mechanism."
+        },
+        {
+          "card_index": 46,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two anatomical regions, though they're typically affected together."
+        },
+        {
+          "card_index": 47,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing single complication."
+        },
+        {
+          "card_index": 48,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests prevalence ranking, percentage, and anatomical location in one card."
+        },
+        {
+          "card_index": 49,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two diagnostic methods as confirmation criteria, though they're used together."
+        }
+      ],
+      "bloom_classes": [
+        {
+          "card_index": 0,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 1,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 2,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 3,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 4,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 5,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 6,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 7,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 8,
+          "bloom_level": "apply"
+        },
+        {
+          "card_index": 9,
+          "bloom_level": "analyze"
+        },
+        {
+          "card_index": 10,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 11,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 12,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 13,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 14,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 15,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 16,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 17,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 18,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 19,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 20,
+          "bloom_level": "apply"
+        },
+        {
+          "card_index": 21,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 22,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 23,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 24,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 25,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 26,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 27,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 28,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 29,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 30,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 31,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 32,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 33,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 34,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 35,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 36,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 37,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 38,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 39,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 40,
+          "bloom_level": "apply"
+        },
+        {
+          "card_index": 41,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 42,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 43,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 44,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 45,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 46,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 47,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 48,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 49,
+          "bloom_level": "apply"
+        }
+      ]
+    }
+  }
+}

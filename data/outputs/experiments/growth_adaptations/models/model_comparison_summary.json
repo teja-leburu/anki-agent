@@ -1,0 +1,30 @@
+{
+  "claude-sonnet": {
+    "cards_generated": 66,
+    "pass_rate": 100.0,
+    "final_cards": 62,
+    "avg_quality": 4.68,
+    "coverage_pct": 81.8,
+    "scores": {
+      "truthfulness": 4.97,
+      "atomicity": 3.6,
+      "self_containment": 4.97,
+      "clarity": 4.89,
+      "relevance": 4.95
+    }
+  },
+  "gpt-4o": {
+    "cards_generated": 48,
+    "pass_rate": 95.8,
+    "final_cards": 43,
+    "avg_quality": 4.75,
+    "coverage_pct": 83.3,
+    "scores": {
+      "truthfulness": 5.0,
+      "atomicity": 4.42,
+      "self_containment": 4.77,
+      "clarity": 4.79,
+      "relevance": 4.77
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "baseline": {
+    "cards": 69,
+    "avg_quality": 4.81,
+    "coverage_pct": 79.31,
+    "scores": {
+      "truthfulness": 4.99,
+      "atomicity": 4.19,
+      "self_containment": 4.99,
+      "clarity": 4.99,
+      "relevance": 4.91
+    }
+  },
+  "pipeline_no_critique": {
+    "cards": 67,
+    "avg_quality": 4.78,
+    "coverage_pct": 72.0,
+    "scores": {
+      "truthfulness": 5.0,
+      "atomicity": 4.07,
+      "self_containment": 4.97,
+      "clarity": 4.91,
+      "relevance": 4.97
+    }
+  },
+  "pipeline_cot": {
+    "cards": 32,
+    "avg_quality": 4.69,
+    "coverage_pct": 76.67,
+    "scores": {
+      "truthfulness": 5.0,
+      "atomicity": 3.66,
+      "self_containment": 4.91,
+      "clarity": 4.94,
+      "relevance": 4.94
+    }
+  }
+}

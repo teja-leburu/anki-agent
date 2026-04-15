@@ -1,0 +1,1364 @@
+{
+  "config": {
+    "name": "pipeline_full",
+    "desc": "Extract \u2192 Generate \u2192 Critique \u2192 Dedup"
+  },
+  "card_count": 34,
+  "evaluation": {
+    "card_count": 34,
+    "heuristic_pass_rate": 100.0,
+    "avg_judge_scores": {
+      "truthfulness": 4.88,
+      "atomicity": 3.71,
+      "self_containment": 4.97,
+      "clarity": 4.71,
+      "relevance": 4.59
+    },
+    "avg_overall": 4.57,
+    "bloom_distribution": {
+      "remember": 22,
+      "understand": 8,
+      "analyze": 3,
+      "evaluate": 1
+    },
+    "coverage": {
+      "key_concepts": [
+        "Rhinology anatomy and physiology",
+        "Nasal obstruction evaluation",
+        "Nasal diseases",
+        "Allergy and rhinitis",
+        "Paranasal sinus disease",
+        "Sinus surgery",
+        "Immunology",
+        "Laryngeal anatomy and physiology",
+        "Dysphonia/hoarseness",
+        "Upper airway obstruction",
+        "Benign laryngeal pathology",
+        "Neurogenic vocal pathologies",
+        "Esophageal and swallowing disorders",
+        "Thyroid disorders",
+        "Parathyroid disorders",
+        "Sleep physiology",
+        "Polysomnography",
+        "Sleep-disordered breathing",
+        "Other sleep disorders",
+        "Oral and oropharyngeal disorders",
+        "Salivary gland anatomy and pathology",
+        "Salivary gland tumors",
+        "Salivary gland surgery",
+        "Odontogenic and jaw pathology",
+        "Neck masses",
+        "Neck spaces and infections",
+        "Head and neck cancer staging",
+        "Chemotherapy and radiation therapy",
+        "Neck cancer",
+        "Oral cancer",
+        "Oropharyngeal cancer",
+        "Hypopharyngeal cancer",
+        "Laryngeal cancer",
+        "Nasopharyngeal cancer",
+        "Nasal and paranasal cancer",
+        "Cutaneous malignancies",
+        "Robotic surgery",
+        "Hearing and balance anatomy/physiology",
+        "Audiology and hearing devices",
+        "Hearing loss and tinnitus",
+        "Ear and temporal bone infections",
+        "Noninfectious ear disorders",
+        "Otologic surgery visualization",
+        "Vestibular pathology",
+        "Facial nerve disorders",
+        "Wound healing fundamentals",
+        "Head and neck reconstructive flaps",
+        "Grafts, implants, and expanders",
+        "Facial reconstruction techniques",
+        "Facial aesthetic surgery",
+        "Rhinoplasty",
+        "Otoplasty",
+        "Blepharoplasty",
+        "Rhytidoplasty",
+        "Forehead and brow lift",
+        "Liposurgery",
+        "Chin and malar augmentation",
+        "Facial resurfacing",
+        "Fillers and injections",
+        "Alopecia",
+        "Scar revision",
+        "Pediatric otolaryngology",
+        "Pediatric sleep disorders",
+        "Pediatric rhinology",
+        "Pediatric laryngoesophagology",
+        "Pediatric salivary glands",
+        "Pediatric otology",
+        "Pediatric syndromes",
+        "Pediatric head and neck surgery",
+        "Pediatric facial plastic surgery",
+        "Pediatric trauma",
+        "Head and neck trauma evaluation",
+        "Mandibular fractures",
+        "Maxillary fractures",
+        "Zygomaticomaxillary and orbital fractures",
+        "Frontal sinus and naso-orbitoethmoid fractures",
+        "Nasal fractures",
+        "Temporal bone trauma",
+        "Penetrating trauma",
+        "Laryngeal trauma",
+        "Soft tissue trauma"
+      ],
+      "covered": [
+        "Rhinology anatomy and physiology",
+        "Sleep physiology",
+        "Polysomnography",
+        "Sleep-disordered breathing",
+        "Nasopharyngeal cancer",
+        "Robotic surgery",
+        "Vestibular pathology",
+        "Facial nerve disorders",
+        "Head and neck reconstructive flaps",
+        "Pediatric otolaryngology",
+        "Head and neck cancer staging",
+        "Temporal bone trauma"
+      ],
+      "missing": [
+        "Nasal obstruction evaluation",
+        "Nasal diseases",
+        "Allergy and rhinitis",
+        "Paranasal sinus disease",
+        "Sinus surgery",
+        "Immunology",
+        "Laryngeal anatomy and physiology",
+        "Dysphonia/hoarseness",
+        "Upper airway obstruction",
+        "Benign laryngeal pathology",
+        "Neurogenic vocal pathologies",
+        "Esophageal and swallowing disorders",
+        "Thyroid disorders",
+        "Parathyroid disorders",
+        "Other sleep disorders",
+        "Oral and oropharyngeal disorders",
+        "Salivary gland anatomy and pathology",
+        "Salivary gland tumors",
+        "Salivary gland surgery",
+        "Odontogenic and jaw pathology",
+        "Neck masses",
+        "Neck spaces and infections",
+        "Chemotherapy and radiation therapy",
+        "Neck cancer",
+        "Oral cancer",
+        "Oropharyngeal cancer",
+        "Hypopharyngeal cancer",
+        "Laryngeal cancer",
+        "Nasal and paranasal cancer",
+        "Cutaneous malignancies",
+        "Hearing and balance anatomy/physiology",
+        "Audiology and hearing devices",
+        "Hearing loss and tinnitus",
+        "Ear and temporal bone infections",
+        "Noninfectious ear disorders",
+        "Otologic surgery visualization",
+        "Wound healing fundamentals",
+        "Grafts, implants, and expanders",
+        "Facial reconstruction techniques",
+        "Facial aesthetic surgery",
+        "Rhinoplasty",
+        "Otoplasty",
+        "Blepharoplasty",
+        "Rhytidoplasty",
+        "Forehead and brow lift",
+        "Liposurgery",
+        "Chin and malar augmentation",
+        "Facial resurfacing",
+        "Fillers and injections",
+        "Alopecia",
+        "Scar revision",
+        "Pediatric sleep disorders",
+        "Pediatric rhinology",
+        "Pediatric laryngoesophagology",
+        "Pediatric salivary glands",
+        "Pediatric otology",
+        "Pediatric syndromes",
+        "Pediatric head and neck surgery",
+        "Pediatric facial plastic surgery",
+        "Pediatric trauma",
+        "Head and neck trauma evaluation",
+        "Mandibular fractures",
+        "Maxillary fractures",
+        "Zygomaticomaxillary and orbital fractures",
+        "Frontal sinus and naso-orbitoethmoid fractures",
+        "Nasal fractures",
+        "Penetrating trauma",
+        "Laryngeal trauma",
+        "Soft tissue trauma"
+      ],
+      "coverage_pct": 14.8
+    },
+    "details": {
+      "heuristics": [
+        {
+          "card_index": 0,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "19 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 1,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "6 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 2,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "6 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 3,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 4,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "17 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 5,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "5 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 6,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "24 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 7,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 8,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "15 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 9,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 10,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 11,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "19 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 12,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 13,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 14,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 15,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "19 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 16,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 17,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 18,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "7 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "8 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 19,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 20,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 21,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "5 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 22,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "6 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 23,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 24,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 25,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 26,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 27,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 28,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 29,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "17 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 30,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 31,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 32,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 33,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        }
+      ],
+      "judge_scores": [
+        {
+          "card_index": 0,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two related facts (specialty name and its scope) rather than being perfectly atomic."
+        },
+        {
+          "card_index": 1,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing a single fact about anatomical coverage of otolaryngology."
+        },
+        {
+          "card_index": 2,
+          "scores": {
+            "truthfulness": 3,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 4
+          },
+          "justification": "Lists only 4 subspecialties when otolaryngology has more (pediatric, head/neck oncology, etc.) making it incomplete."
+        },
+        {
+          "card_index": 3,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card testing one specific fact about rhinology's focus area."
+        },
+        {
+          "card_index": 4,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 4
+          },
+          "justification": "Tests multiple facts (definition, anatomy coverage, and examples) making it non-atomic."
+        },
+        {
+          "card_index": 5,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three separate concepts (physiology, PSG, and breathing disorders) rather than one."
+        },
+        {
+          "card_index": 6,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the definition and multiple specific parameters measured, reducing atomicity."
+        },
+        {
+          "card_index": 7,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect card testing single fact about PSG being the gold standard diagnostic."
+        },
+        {
+          "card_index": 8,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the definition and a specific example, slightly reducing atomicity."
+        },
+        {
+          "card_index": 9,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three facts (viral association and two types of predilections) in one card."
+        },
+        {
+          "card_index": 10,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Somewhat trivial as the answer is contained in the question's terminology."
+        },
+        {
+          "card_index": 11,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 1,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 5
+          },
+          "justification": "Tests four separate facts (nerve number, motor function, parasympathetic function, target glands)."
+        },
+        {
+          "card_index": 12,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two functions rather than one, slightly reducing atomicity."
+        },
+        {
+          "card_index": 13,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two advantages (visualization and precision) rather than one specific fact."
+        },
+        {
+          "card_index": 14,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three related concepts (balance system, spatial orientation, equilibrium) in one card."
+        },
+        {
+          "card_index": 15,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests definition, purpose (form and function), and clinical applications in one card."
+        },
+        {
+          "card_index": 16,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 5
+          },
+          "justification": "Tests three different reasons (anatomy, development, disease patterns) rather than one."
+        },
+        {
+          "card_index": 17,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 1,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests four facts (TNM acronym and what each letter stands for) in one card."
+        },
+        {
+          "card_index": 18,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two related purposes (extent and treatment) rather than one."
+        },
+        {
+          "card_index": 19,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Lists three complications rather than testing knowledge of one specific fact."
+        },
+        {
+          "card_index": 20,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 3
+          },
+          "justification": "Relevance is questionable as this is more of a terminology preference than essential medical knowledge."
+        },
+        {
+          "card_index": 21,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 3
+          },
+          "justification": "Low relevance as this tests terminology preference rather than important medical concepts."
+        },
+        {
+          "card_index": 22,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the recommendation and the rationale in one question."
+        },
+        {
+          "card_index": 23,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the recommendation against removal and the reason why."
+        },
+        {
+          "card_index": 24,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 3,
+            "relevance": 4
+          },
+          "justification": "Vague about what makes the boundaries \"specific\" without providing actual detail."
+        },
+        {
+          "card_index": 25,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Good atomic card but relatively basic fact about surgical anatomy."
+        },
+        {
+          "card_index": 26,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 3,
+            "relevance": 3
+          },
+          "justification": "Too vague - doesn't specify what makes this region relevant or important."
+        },
+        {
+          "card_index": 27,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 4,
+            "clarity": 4,
+            "relevance": 4
+          },
+          "justification": "Requires understanding of what constitutes \"complex skull base procedures\" for full context."
+        },
+        {
+          "card_index": 28,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the anatomical structure and its risk level classification."
+        },
+        {
+          "card_index": 29,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests the technique name, approach route, and instrument used - three facts in one."
+        },
+        {
+          "card_index": 30,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent atomic card testing one specific surgical approach."
+        },
+        {
+          "card_index": 31,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Tests both what the fellowship is and when it occurs in training sequence."
+        },
+        {
+          "card_index": 32,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Good atomic card but tests relatively basic training pathway information."
+        },
+        {
+          "card_index": 33,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Excellent card highlighting important systemic effects of hearing loss beyond the ear."
+        }
+      ],
+      "bloom_classes": [
+        {
+          "card_index": 0,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 1,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 2,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 3,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 4,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 5,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 6,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 7,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 8,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 9,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 10,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 11,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 12,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 13,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 14,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 15,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 16,
+          "bloom_level": "analyze"
+        },
+        {
+          "card_index": 17,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 18,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 19,
+          "bloom_level": "analyze"
+        },
+        {
+          "card_index": 20,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 21,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 22,
+          "bloom_level": "evaluate"
+        },
+        {
+          "card_index": 23,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 24,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 25,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 26,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 27,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 28,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 29,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 30,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 31,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 32,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 33,
+          "bloom_level": "analyze"
+        }
+      ]
+    }
+  }
+}

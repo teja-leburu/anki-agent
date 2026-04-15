@@ -1,0 +1,758 @@
+{
+  "config": {
+    "name": "pipeline_cot",
+    "desc": "Full pipeline + chain-of-thought generation"
+  },
+  "card_count": 17,
+  "evaluation": {
+    "card_count": 17,
+    "heuristic_pass_rate": 100.0,
+    "avg_judge_scores": {
+      "truthfulness": 4.71,
+      "atomicity": 4.06,
+      "self_containment": 4.88,
+      "clarity": 3.82,
+      "relevance": 4.53
+    },
+    "avg_overall": 4.4,
+    "bloom_distribution": {
+      "remember": 8,
+      "understand": 7,
+      "analyze": 1,
+      "apply": 1
+    },
+    "coverage": {
+      "key_concepts": [
+        "Rhinology and paranasal sinuses",
+        "Nasal anatomy and physiology",
+        "Nasal obstruction evaluation",
+        "Allergy and rhinitis",
+        "Sinus disease and surgery",
+        "Immunology",
+        "Laryngology",
+        "Laryngeal anatomy and physiology",
+        "Dysphonia/hoarse voice",
+        "Upper airway obstruction",
+        "Benign laryngeal pathology",
+        "Neurogenic vocal pathologies",
+        "Esophageal and swallowing disorders",
+        "Thyroid disorders",
+        "Parathyroid disorders",
+        "Sleep medicine and physiology",
+        "Polysomnography (PSG)",
+        "Sleep-disordered breathing (SDB)",
+        "Oral and oropharyngeal disorders",
+        "Salivary gland anatomy and pathology",
+        "Salivary gland tumors and surgery",
+        "Odontogenic and jaw pathology",
+        "Neck masses and spaces",
+        "Head and neck cancer staging",
+        "Chemotherapy and radiation therapy",
+        "Oral cancer",
+        "Oropharyngeal cancer",
+        "Hypopharyngeal cancer",
+        "Laryngeal cancer",
+        "Nasopharyngeal cancer",
+        "Nasal and paranasal cancer",
+        "Cutaneous malignancies",
+        "Robotic surgery",
+        "Otology and neurotology",
+        "Audiology and hearing devices",
+        "Hearing loss and tinnitus",
+        "Ear infections",
+        "Temporal bone disorders",
+        "Vestibular pathology",
+        "Facial nerve",
+        "Reconstructive and facial plastic surgery",
+        "Wound healing",
+        "Head and neck reconstructive flaps",
+        "Facial aesthetic surgery",
+        "Rhinoplasty",
+        "Pediatric otolaryngology",
+        "Head and neck trauma",
+        "Mandibular fractures",
+        "Maxillary fractures",
+        "Cranial nerves",
+        "Radiology",
+        "Anesthesia"
+      ],
+      "covered": [
+        "Sleep medicine and physiology",
+        "Sleep-disordered breathing (SDB)",
+        "Nasopharyngeal cancer",
+        "Facial nerve",
+        "Robotic surgery",
+        "Vestibular pathology",
+        "Head and neck reconstructive flaps",
+        "Head and neck cancer staging",
+        "Otology and neurotology"
+      ],
+      "missing": [
+        "Rhinology and paranasal sinuses",
+        "Nasal anatomy and physiology",
+        "Nasal obstruction evaluation",
+        "Allergy and rhinitis",
+        "Sinus disease and surgery",
+        "Immunology",
+        "Laryngology",
+        "Laryngeal anatomy and physiology",
+        "Dysphonia/hoarse voice",
+        "Upper airway obstruction",
+        "Benign laryngeal pathology",
+        "Neurogenic vocal pathologies",
+        "Esophageal and swallowing disorders",
+        "Thyroid disorders",
+        "Parathyroid disorders",
+        "Polysomnography (PSG)",
+        "Oral and oropharyngeal disorders",
+        "Salivary gland anatomy and pathology",
+        "Salivary gland tumors and surgery",
+        "Odontogenic and jaw pathology",
+        "Neck masses and spaces",
+        "Chemotherapy and radiation therapy",
+        "Oral cancer",
+        "Oropharyngeal cancer",
+        "Hypopharyngeal cancer",
+        "Laryngeal cancer",
+        "Nasal and paranasal cancer",
+        "Cutaneous malignancies",
+        "Audiology and hearing devices",
+        "Hearing loss and tinnitus",
+        "Ear infections",
+        "Temporal bone disorders",
+        "Reconstructive and facial plastic surgery",
+        "Wound healing",
+        "Facial aesthetic surgery",
+        "Rhinoplasty",
+        "Pediatric otolaryngology",
+        "Head and neck trauma",
+        "Mandibular fractures",
+        "Maxillary fractures",
+        "Cranial nerves",
+        "Radiology",
+        "Anesthesia"
+      ],
+      "coverage_pct": 18.0
+    },
+    "details": {
+      "heuristics": [
+        {
+          "card_index": 0,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "3 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "10 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 1,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "6 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "6 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 2,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "13 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 3,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "10 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 4,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "11 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 5,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "9 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 6,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "14 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 7,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "12 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 8,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "12 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 9,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "2 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 10,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "6 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 11,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "6 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 12,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 13,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "6 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 14,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "6 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "12 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 15,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "5 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "12 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 16,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "7 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        }
+      ],
+      "judge_scores": [
+        {
+          "card_index": 0,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Slightly non-atomic as it lists multiple structures (ears, nose, throat, head and neck) rather than focusing on one aspect."
+        },
+        {
+          "card_index": 1,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 5
+          },
+          "justification": "Tests three distinct facts (sleep physiology, polysomnography, and sleep-disordered breathing) in one card."
+        },
+        {
+          "card_index": 2,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Slightly non-atomic as it defines SDB and provides an example (OSA) in the same answer."
+        },
+        {
+          "card_index": 3,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 5
+          },
+          "justification": "Tests two distinct facts (what NPC is and its viral association) in a single question."
+        },
+        {
+          "card_index": 4,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests multiple facts (facial muscles and parasympathetic innervation to two different glands)."
+        },
+        {
+          "card_index": 5,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 3,
+            "relevance": 4
+          },
+          "justification": "Answer is vague ('enhanced visualization and precision') without specific examples of what makes robotic surgery advantageous."
+        },
+        {
+          "card_index": 6,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 5
+          },
+          "justification": "Slightly non-atomic as it mentions both inner ear structures and two functions (spatial orientation and equilibrium)."
+        },
+        {
+          "card_index": 7,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 5
+          },
+          "justification": "Mentions two distinct uses (cancer resection and trauma) rather than focusing on one application."
+        },
+        {
+          "card_index": 8,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both what TNM stands for and its purpose in one card."
+        },
+        {
+          "card_index": 9,
+          "scores": {
+            "truthfulness": 3,
+            "atomicity": 5,
+            "self_containment": 3,
+            "clarity": 3,
+            "relevance": 3
+          },
+          "justification": "Unclear whether 'palatal reconstruction' is universally preferred terminology or context-specific preference."
+        },
+        {
+          "card_index": 10,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 3,
+            "relevance": 4
+          },
+          "justification": "Answer is vague about what 'important physiological purposes' the uvula serves."
+        },
+        {
+          "card_index": 11,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 3,
+            "relevance": 4
+          },
+          "justification": "Answer lacks specificity about why these boundaries are critical for safety."
+        },
+        {
+          "card_index": 12,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 3,
+            "relevance": 4
+          },
+          "justification": "Answer is too vague - 'complex skull base procedures' doesn't specify which procedures."
+        },
+        {
+          "card_index": 13,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 2,
+            "relevance": 4
+          },
+          "justification": "Answer is circular and uninformative - doesn't explain what makes it high-risk or what the specific technique entails."
+        },
+        {
+          "card_index": 14,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are strong - clear, atomic, accurate definition of the surgical technique."
+        },
+        {
+          "card_index": 15,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "All dimensions are strong - clear, atomic definition of the fellowship training."
+        },
+        {
+          "card_index": 16,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 2,
+            "relevance": 4
+          },
+          "justification": "Answer is too vague - 'measurable effects' doesn't specify what changes occur in brain function or structure."
+        }
+      ],
+      "bloom_classes": [
+        {
+          "card_index": 0,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 1,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 2,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 3,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 4,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 5,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 6,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 7,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 8,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 9,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 10,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 11,
+          "bloom_level": "analyze"
+        },
+        {
+          "card_index": 12,
+          "bloom_level": "apply"
+        },
+        {
+          "card_index": 13,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 14,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 15,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 16,
+          "bloom_level": "understand"
+        }
+      ]
+    }
+  }
+}

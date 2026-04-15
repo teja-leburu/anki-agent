@@ -1,0 +1,74 @@
+{
+  "baseline": {
+    "cards": 36,
+    "avg_quality": 4.83,
+    "coverage_pct": 85.29,
+    "scores": {
+      "truthfulness": 4.97,
+      "atomicity": 4.19,
+      "self_containment": 5.0,
+      "clarity": 4.97,
+      "relevance": 5.0
+    }
+  },
+  "pipeline_no_critique": {
+    "cards": 27,
+    "avg_quality": 4.66,
+    "coverage_pct": 82.14,
+    "scores": {
+      "truthfulness": 5.0,
+      "atomicity": 3.3,
+      "self_containment": 5.0,
+      "clarity": 5.0,
+      "relevance": 5.0
+    }
+  },
+  "pipeline_full": {
+    "cards": 22,
+    "avg_quality": 4.86,
+    "coverage_pct": 69.6,
+    "scores": {
+      "truthfulness": 5.0,
+      "atomicity": 4.45,
+      "self_containment": 5.0,
+      "clarity": 4.95,
+      "relevance": 4.91
+    }
+  },
+  "pipeline_cot": {
+    "cards": 16,
+    "avg_quality": 4.78,
+    "coverage_pct": 66.67,
+    "scores": {
+      "truthfulness": 4.94,
+      "atomicity": 4.0,
+      "self_containment": 5.0,
+      "clarity": 4.94,
+      "relevance": 5.0
+    }
+  },
+  "pipeline_few_shot_3": {
+    "cards": 24,
+    "avg_quality": 4.77,
+    "coverage_pct": 73.1,
+    "scores": {
+      "truthfulness": 5.0,
+      "atomicity": 3.88,
+      "self_containment": 5.0,
+      "clarity": 5.0,
+      "relevance": 4.96
+    }
+  },
+  "pipeline_few_shot_1": {
+    "cards": 24,
+    "avg_quality": 4.73,
+    "coverage_pct": 64.0,
+    "scores": {
+      "truthfulness": 4.92,
+      "atomicity": 3.83,
+      "self_containment": 5.0,
+      "clarity": 4.92,
+      "relevance": 4.96
+    }
+  }
+}

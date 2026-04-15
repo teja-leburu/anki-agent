@@ -1,0 +1,1091 @@
+{
+  "model": "gpt-4o",
+  "cards_generated": 40,
+  "cards_after_critique": 27,
+  "cards_after_dedup": 27,
+  "evaluation": {
+    "card_count": 27,
+    "heuristic_pass_rate": 100.0,
+    "avg_judge_scores": {
+      "truthfulness": 4.78,
+      "atomicity": 3.74,
+      "self_containment": 5.0,
+      "clarity": 4.74,
+      "relevance": 4.44
+    },
+    "avg_overall": 4.54,
+    "bloom_distribution": {
+      "remember": 20,
+      "understand": 7
+    },
+    "coverage": {
+      "key_concepts": [
+        "Otolaryngology definition and scope",
+        "Head and neck surgery",
+        "Rhinology and paranasal sinuses",
+        "Nasal anatomy and physiology",
+        "Nasal obstruction evaluation",
+        "Allergy and rhinitis",
+        "Paranasal sinus disease",
+        "Sinus surgery",
+        "Immunology",
+        "Laryngology",
+        "Laryngeal anatomy and physiology",
+        "Dysphonia/hoarseness",
+        "Upper airway obstruction",
+        "Benign laryngeal pathology",
+        "Neurogenic vocal pathologies",
+        "Esophageal and swallowing disorders",
+        "Otolaryngologic endocrinology",
+        "Thyroid disorders",
+        "Parathyroid disorders",
+        "Sleep medicine",
+        "Sleep physiology",
+        "Polysomnography",
+        "Sleep-disordered breathing",
+        "Salivary gland anatomy and pathology",
+        "Salivary gland tumors",
+        "Salivary gland surgery",
+        "Odontogenic and jaw pathology",
+        "Neck masses",
+        "Neck spaces and infections",
+        "Head and neck cancer",
+        "Cancer staging",
+        "Chemotherapy and radiation therapy",
+        "Oral cancer",
+        "Oropharyngeal cancer",
+        "Hypopharyngeal cancer",
+        "Laryngeal cancer",
+        "Nasopharyngeal cancer",
+        "Nasal and paranasal cancer",
+        "Cutaneous malignancies",
+        "Robotic surgery",
+        "Otology and neurotology",
+        "Hearing anatomy and physiology",
+        "Audiology and hearing devices",
+        "Hearing loss and tinnitus",
+        "Ear infections",
+        "Temporal bone disorders",
+        "Vestibular pathology",
+        "Facial nerve",
+        "Reconstructive and facial plastic surgery",
+        "Wound healing",
+        "Reconstructive flaps",
+        "Grafts and implants",
+        "Facial reconstruction",
+        "Facial aesthetic surgery",
+        "Rhinoplasty",
+        "Otoplasty",
+        "Blepharoplasty",
+        "Rhytidoplasty/facelift",
+        "Forehead and brow lift",
+        "Liposurgery",
+        "Chin and malar augmentation",
+        "Facial resurfacing",
+        "Fillers and injections",
+        "Alopecia",
+        "Scar revision",
+        "Pediatric otolaryngology",
+        "Pediatric rhinology",
+        "Pediatric laryngoesophagology",
+        "Pediatric salivary glands",
+        "Pediatric otology",
+        "Pediatric syndromes",
+        "Pediatric head and neck surgery",
+        "Pediatric reconstructive surgery",
+        "Head and neck trauma",
+        "Mandibular fractures",
+        "Maxillary fractures",
+        "Zygomaticomaxillary and orbital fractures",
+        "Frontal sinus and naso-orbitoethmoid fractures",
+        "Nasal fractures",
+        "Temporal bone trauma",
+        "Penetrating head and neck trauma",
+        "Laryngeal trauma",
+        "Soft tissue trauma",
+        "Cranial nerves",
+        "Radiology",
+        "Anesthesia",
+        "Common consults"
+      ],
+      "covered": [
+        "Otolaryngology definition and scope",
+        "Nasal obstruction evaluation",
+        "Allergy and rhinitis",
+        "Paranasal sinus disease",
+        "Laryngology",
+        "Thyroid disorders",
+        "Sleep-disordered breathing",
+        "Cancer staging",
+        "Audiology and hearing devices",
+        "Vestibular pathology",
+        "Reconstructive flaps",
+        "Pediatric otolaryngology",
+        "Head and neck trauma",
+        "Mandibular fractures",
+        "Maxillary fractures",
+        "Zygomaticomaxillary and orbital fractures",
+        "Frontal sinus and naso-orbitoethmoid fractures",
+        "Penetrating head and neck trauma",
+        "Laryngeal trauma",
+        "Facial recess",
+        "Transcanal endoscopic ear surgery"
+      ],
+      "missing": [
+        "Head and neck surgery",
+        "Rhinology and paranasal sinuses",
+        "Nasal anatomy and physiology",
+        "Sinus surgery",
+        "Immunology",
+        "Laryngeal anatomy and physiology",
+        "Dysphonia/hoarseness",
+        "Upper airway obstruction",
+        "Benign laryngeal pathology",
+        "Neurogenic vocal pathologies",
+        "Esophageal and swallowing disorders",
+        "Otolaryngologic endocrinology",
+        "Parathyroid disorders",
+        "Sleep medicine",
+        "Sleep physiology",
+        "Polysomnography",
+        "Salivary gland anatomy and pathology",
+        "Salivary gland tumors",
+        "Salivary gland surgery",
+        "Odontogenic and jaw pathology",
+        "Neck masses",
+        "Neck spaces and infections",
+        "Head and neck cancer",
+        "Chemotherapy and radiation therapy",
+        "Oral cancer",
+        "Oropharyngeal cancer",
+        "Hypopharyngeal cancer",
+        "Laryngeal cancer",
+        "Nasopharyngeal cancer",
+        "Nasal and paranasal cancer",
+        "Cutaneous malignancies",
+        "Robotic surgery",
+        "Otology and neurotology",
+        "Hearing anatomy and physiology",
+        "Hearing loss and tinnitus",
+        "Ear infections",
+        "Temporal bone disorders",
+        "Facial nerve",
+        "Reconstructive and facial plastic surgery",
+        "Wound healing",
+        "Grafts and implants",
+        "Facial reconstruction",
+        "Facial aesthetic surgery",
+        "Rhinoplasty",
+        "Otoplasty",
+        "Blepharoplasty",
+        "Rhytidoplasty/facelift",
+        "Forehead and brow lift",
+        "Liposurgery",
+        "Chin and malar augmentation",
+        "Facial resurfacing",
+        "Fillers and injections",
+        "Alopecia",
+        "Scar revision",
+        "Pediatric rhinology",
+        "Pediatric laryngoesophagology",
+        "Pediatric salivary glands",
+        "Pediatric otology",
+        "Pediatric syndromes",
+        "Pediatric head and neck surgery",
+        "Pediatric reconstructive surgery",
+        "Nasal fractures",
+        "Temporal bone trauma",
+        "Soft tissue trauma",
+        "Cranial nerves",
+        "Radiology",
+        "Anesthesia",
+        "Common consults"
+      ],
+      "coverage_pct": 24.7
+    },
+    "details": {
+      "heuristics": [
+        {
+          "card_index": 0,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "16 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 1,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "6 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "6 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 2,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 3,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 4,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 5,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 6,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "3 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        },
+        {
+          "card_index": 7,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 8,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 9,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 10,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "17 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 11,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "18 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 12,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "17 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 13,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "15 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 14,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "15 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 15,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 16,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 17,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "8 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 18,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 19,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 20,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "16 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 21,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "10 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 22,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "11 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 23,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "12 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 24,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "14 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 25,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "13 words (max 30)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "cloze_format": {
+              "passed": true,
+              "detail": "valid cloze syntax"
+            }
+          }
+        },
+        {
+          "card_index": 26,
+          "checks": {
+            "front_length": {
+              "passed": true,
+              "detail": "9 words (max 30)"
+            },
+            "back_length": {
+              "passed": true,
+              "detail": "4 words (max 20)"
+            },
+            "front_nonempty": {
+              "passed": true,
+              "detail": "front is non-empty"
+            },
+            "single_question": {
+              "passed": true,
+              "detail": "1 question marks"
+            }
+          }
+        }
+      ],
+      "judge_scores": [
+        {
+          "card_index": 0,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect medical definition card testing a single essential fact."
+        },
+        {
+          "card_index": 1,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 4
+          },
+          "justification": "While mostly correct, the answer could be more precise about which specific head and neck structures are included."
+        },
+        {
+          "card_index": 2,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Tests two separate concepts (physical and physiological factors) in a single card."
+        },
+        {
+          "card_index": 3,
+          "scores": {
+            "truthfulness": 4,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 5
+          },
+          "justification": "Combines definition of rhinitis with its common cause (allergies) in one card."
+        },
+        {
+          "card_index": 4,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the definition of laryngology and examples of what it includes."
+        },
+        {
+          "card_index": 5,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 5
+          },
+          "justification": "Combines definition and example, though the example is appropriately illustrative."
+        },
+        {
+          "card_index": 6,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Perfect atomic card, though relevance depends on learner's medical focus."
+        },
+        {
+          "card_index": 7,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both location of obstruction and common causes in one card."
+        },
+        {
+          "card_index": 8,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Slightly non-atomic as it mentions both inflammation and infection as types."
+        },
+        {
+          "card_index": 9,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests three separate functions of thyroid hormones in one card."
+        },
+        {
+          "card_index": 10,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests multiple aspects of cancer staging (size, location, spread, purpose) in one card."
+        },
+        {
+          "card_index": 11,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both what audiology studies and what it treats in one card."
+        },
+        {
+          "card_index": 12,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 2,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests multiple symptoms (dizziness, imbalance, vertigo) in one card."
+        },
+        {
+          "card_index": 13,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect atomic definition of reconstructive flaps."
+        },
+        {
+          "card_index": 14,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests both the patient population and examples of conditions in one card."
+        },
+        {
+          "card_index": 15,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 4
+          },
+          "justification": "Slightly vague about what 'systematic assessment' specifically entails."
+        },
+        {
+          "card_index": 16,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect atomic anatomical definition."
+        },
+        {
+          "card_index": 17,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect atomic anatomical definition."
+        },
+        {
+          "card_index": 18,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two separate bones in one card, though they're anatomically related."
+        },
+        {
+          "card_index": 19,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 4
+          },
+          "justification": "Tests two anatomical locations affected by frontal sinus fractures."
+        },
+        {
+          "card_index": 20,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Tests two body regions (head and neck) though they're often grouped together medically."
+        },
+        {
+          "card_index": 21,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 5
+          },
+          "justification": "Perfect atomic definition with helpful clarification."
+        },
+        {
+          "card_index": 22,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 3,
+            "relevance": 4
+          },
+          "justification": "Doesn't explain what the procedure is for or what 'surrounding tissue' specifically means."
+        },
+        {
+          "card_index": 23,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 3
+          },
+          "justification": "Tests both a year and an event, and the connection to otolaryngology is unclear."
+        },
+        {
+          "card_index": 24,
+          "scores": {
+            "truthfulness": 5,
+            "atomicity": 3,
+            "self_containment": 5,
+            "clarity": 4,
+            "relevance": 4
+          },
+          "justification": "Tests both anatomical location and clinical relevance in one card."
+        },
+        {
+          "card_index": 25,
+          "scores": {
+            "truthfulness": 3,
+            "atomicity": 4,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 2
+          },
+          "justification": "Without verification, specific faculty positions may change; also low general relevance."
+        },
+        {
+          "card_index": 26,
+          "scores": {
+            "truthfulness": 3,
+            "atomicity": 5,
+            "self_containment": 5,
+            "clarity": 5,
+            "relevance": 2
+          },
+          "justification": "Claims about being a 'pioneer' are difficult to verify and have limited general relevance."
+        }
+      ],
+      "bloom_classes": [
+        {
+          "card_index": 0,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 1,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 2,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 3,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 4,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 5,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 6,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 7,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 8,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 9,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 10,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 11,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 12,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 13,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 14,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 15,
+          "bloom_level": "understand"
+        },
+        {
+          "card_index": 16,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 17,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 18,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 19,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 20,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 21,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 22,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 23,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 24,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 25,
+          "bloom_level": "remember"
+        },
+        {
+          "card_index": 26,
+          "bloom_level": "remember"
+        }
+      ]
+    }
+  }
+}

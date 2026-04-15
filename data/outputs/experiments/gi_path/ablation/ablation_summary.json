@@ -1,0 +1,50 @@
+{
+  "baseline": {
+    "cards": 74,
+    "avg_quality": 4.84,
+    "coverage_pct": 60.87,
+    "scores": {
+      "truthfulness": 4.99,
+      "atomicity": 4.31,
+      "self_containment": 5.0,
+      "clarity": 4.95,
+      "relevance": 4.93
+    }
+  },
+  "pipeline_no_critique": {
+    "cards": 51,
+    "avg_quality": 4.61,
+    "coverage_pct": 65.2,
+    "scores": {
+      "truthfulness": 4.98,
+      "atomicity": 3.35,
+      "self_containment": 4.84,
+      "clarity": 4.92,
+      "relevance": 4.94
+    }
+  },
+  "pipeline_cot": {
+    "cards": 20,
+    "avg_quality": 4.64,
+    "coverage_pct": 62.5,
+    "scores": {
+      "truthfulness": 5.0,
+      "atomicity": 3.4,
+      "self_containment": 5.0,
+      "clarity": 5.0,
+      "relevance": 4.8
+    }
+  },
+  "pipeline_few_shot_1": {
+    "cards": 39,
+    "avg_quality": 4.87,
+    "coverage_pct": 64.0,
+    "scores": {
+      "truthfulness": 5.0,
+      "atomicity": 4.36,
+      "self_containment": 5.0,
+      "clarity": 5.0,
+      "relevance": 5.0
+    }
+  }
+}

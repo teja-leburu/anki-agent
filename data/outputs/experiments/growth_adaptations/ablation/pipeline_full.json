@@ -1,0 +1,10 @@
+{
+  "config": {
+    "name": "pipeline_full",
+    "desc": "Extract \u2192 Generate \u2192 Critique \u2192 Dedup"
+  },
+  "card_count": 0,
+  "evaluation": {
+    "error": "'str' object has no attribute 'get'"
+  }
+}

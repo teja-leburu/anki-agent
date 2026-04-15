@@ -2,7 +2,9 @@ __pycache__/
 *.pyc
 .env
 *.apkg
-data/outputs/
+data/outputs/*.json
+data/outputs/*.apkg
+data/outputs/pipeline_stats.json
 .venv/
 venv/
 .DS_Store
