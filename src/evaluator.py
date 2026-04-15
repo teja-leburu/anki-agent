@@ -166,18 +166,44 @@ def measure_coverage(source_text: str, cards: list[dict], client, model: str) ->
 # 5. Aggregate evaluation
 # ---------------------------------------------------------------------------
 
-def evaluate_cards(cards: list[dict], source_text: str, client, model: str) -> dict:
-    """Run the full evaluation suite on a set of cards."""
-    heuristics = run_heuristics(cards)
-    judge_scores = llm_judge_score(cards, client, model)
+BATCH_SIZE = 25  # max cards per LLM call to avoid malformed responses
 
-    bloom_classes = classify_blooms(cards, client, model)
+
+def _batched_call(fn, cards, client, model, reindex=True):
+    """Call an LLM evaluation function in batches, merging results."""
+    all_results = []
+    for i in range(0, len(cards), BATCH_SIZE):
+        batch = cards[i:i + BATCH_SIZE]
+        try:
+            results = fn(batch, client, model)
+            if reindex:
+                for r in results:
+                    if "card_index" in r:
+                        r["card_index"] += i
+            all_results.extend(results)
+        except Exception as e:
+            print(f"    ✗ Batch {i//BATCH_SIZE + 1} error: {e}")
+    return all_results
+
+
+def evaluate_cards(cards: list[dict], source_text: str, client, model: str) -> dict:
+    """Run the full evaluation suite on a set of cards (batched for large sets)."""
+    heuristics = run_heuristics(cards)
+    judge_scores = _batched_call(llm_judge_score, cards, client, model)
+
+    bloom_classes = _batched_call(classify_blooms, cards, client, model)
     bloom_dist = {}
     for entry in bloom_classes:
         level = entry.get("bloom_level", "unknown")
         bloom_dist[level] = bloom_dist.get(level, 0) + 1
 
-    coverage = measure_coverage(source_text, cards, client, model)
+    # Truncate source text for very large documents to avoid token limits
+    truncated_source = source_text[:8000] if len(source_text) > 8000 else source_text
+    try:
+        coverage = measure_coverage(truncated_source, cards[:BATCH_SIZE], client, model)
+    except Exception as e:
+        print(f"    ✗ Coverage error: {e}")
+        coverage = {"coverage_pct": 0}
 
     all_scores = [s["scores"] for s in judge_scores if "scores" in s]
     dimensions = ["truthfulness", "atomicity", "self_containment", "clarity", "relevance"]
