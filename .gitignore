@@ -4,8 +4,7 @@ __pycache__/
 *.apkg
 *.pptx
 *.tex
-report.md
-report.pdf
+report.*
 data/outputs/*.json
 data/outputs/*.apkg
 data/outputs/pipeline_stats.json
