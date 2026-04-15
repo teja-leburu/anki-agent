@@ -2,6 +2,10 @@ __pycache__/
 *.pyc
 .env
 *.apkg
+*.pptx
+*.tex
+report.md
+report.pdf
 data/outputs/*.json
 data/outputs/*.apkg
 data/outputs/pipeline_stats.json
